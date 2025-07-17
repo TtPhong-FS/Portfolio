@@ -8,7 +8,7 @@ const Project = () => {
   return (
     <section id="projects" className="relative z-20 py-20">
       <h1 className="heading text-white mb-10">
-        A small selection of <span className="text-purple">recent projects</span>
+        A small selection of <span className="text-purple">recent my personal projects</span>
       </h1>
       <div className="flex items-center justify-center lg:flex-row flex-col gap-4">
         {projects.map(({ des, id, img, link, technicals, title }) => (
