@@ -1,6 +1,5 @@
 import { projects } from '@/constants'
 import Image from 'next/image'
-import Link from 'next/link'
 import { IoIosSend } from 'react-icons/io'
 import { PinContainer } from '../ui/pin'
 
@@ -12,8 +11,8 @@ const Project = () => {
       </h1>
       <div className="flex items-center justify-center lg:flex-row flex-col gap-4">
         {projects.map(({ des, id, img, link, technicals, title }) => (
-          <div className="h-[25rem] flex flex-col items-center justify-center ">
-            <PinContainer key={id} title={link} href={link}>
+          <div key={id} className="h-[25rem] flex flex-col items-center justify-center ">
+            <PinContainer title={link} href={link}>
               <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
                 <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">{title}</h3>
                 <div className="text-base !p-0 font-normal">
@@ -38,9 +37,9 @@ const Project = () => {
                     </div>
                   ))}
                 </div>
-                <Link className="flex items-center gap-1 text-purple " href={link}>
+                <div className="flex items-center gap-1 text-purple">
                   Check <IoIosSend className="text-lg" />
-                </Link>
+                </div>
               </div>
             </PinContainer>
           </div>

@@ -16,16 +16,16 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-tighter text-xs text-center text-blue-100  max-w-80">Portfolio</h2>
+          <h2 className="tracking-tighter text-xs text-center text-blue-100  max-w-80">Hi! I'm Tran Thanh Phong</h2>
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Welcome to my portfolio, nice to meet you."
+            words="Frontend web developer based in Vietnam."
           />
           <p className="text-center text-white md:tracking-tighter mb-4 mt-2 text-sm lg:text-base">
-            Hi, <span className="text-purple">I&apos;m Phong </span>is a frontend developer.
+            I am <span className="text-purple"> frontend developer</span> from Hanoi, Vietnam.
           </p>
 
-          <Link href="#about">
+          <Link href="#my-work">
             <ButtonMagic position="right" icon={<BiSolidNavigation />} title="Show my work" />
           </Link>
         </div>
