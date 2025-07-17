@@ -1,4 +1,5 @@
 import { projects } from '@/constants'
+import Image from 'next/image'
 import { FaLocationArrow } from 'react-icons/fa'
 import { PinContainer } from '../ui/pin'
 import { Spotlight } from '../ui/spot-light'
@@ -21,7 +22,7 @@ const Project = () => {
                     <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
                   </div>
                 ) : (
-                  <img src={img} alt="cover" className="z-10 absolute bottom-0" />
+                  <Image width={600} height={600} src={img} alt="cover" className="z-10 absolute bottom-0" />
                 )}
               </div>
 
@@ -47,7 +48,7 @@ const Project = () => {
                         transform: `translateX(-${5 * index + 2}px)`
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <Image height={500} width={500} src={icon} alt="icon5" className="p-2" />
                     </div>
                   ))}
                 </div>

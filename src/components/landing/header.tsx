@@ -6,7 +6,7 @@ import { FloatingNavbar } from '../ui/floating-navbar'
 const Header = () => {
   return (
     <header className="flex items-center relative z-30">
-      <FloatingNavbar className="" navItems={navItems} />
+      <FloatingNavbar navItems={navItems} />
     </header>
   )
 }
