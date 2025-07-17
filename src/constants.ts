@@ -26,7 +26,7 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    des: '',
+    des: 'A website for shopping products about electronics and technicals.',
     title: 'E-Commerce for technology',
     img: '/img-techgear-client.png',
     link: 'https://techgear-silk.vercel.app',
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     id: 2,
-    des: '',
+    des: 'My portfolio page is a showcase of my personal projects and the technologies used.',
     title: 'Portfolio',
     img: '/portfolio-img.png',
     link: '/',
