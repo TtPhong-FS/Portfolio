@@ -16,7 +16,7 @@ const Header = () => {
     <header className="fixed w-full top-0 z-50">
       <nav className="w-full max-w-7xl mx-auto z-50 py-4 flex justify-between items-center">
         <h1 className="hidden lg:block text-center md:text-xl text-white font-semibold">TtPhong.dev</h1>
-        <ul className="flex h-full items-center shadow-sm gap-8 text-white lg:gap-8 bg-slate-900 px-6 lg:px-8 py-3 border-white/[0.2] rounded-full">
+        <ul className="flex h-full items-center shadow-sm gap-8 text-white lg:gap-8 bg-slate-900 px-6 lg:px-8 py-4 border-white/[0.2] rounded-full">
           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`link=${idx}`}
