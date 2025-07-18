@@ -1,4 +1,5 @@
-import { FaFolderOpen, FaHandshake, FaHome, FaPhone, FaUser } from 'react-icons/fa'
+import { FaBriefcase, FaHandshake, FaHome, FaUser } from 'react-icons/fa'
+import { FiFacebook, FiMail, FiPhone } from 'react-icons/fi'
 import {
   BriefCase,
   BriefCaseBlack,
@@ -8,9 +9,7 @@ import {
   GlodeBlack,
   Graducation,
   GraducationBlack,
-  ImageMe,
-  Puzzle,
-  PuzzleBlack
+  ImageMe
 } from './assets'
 
 export const navItems = [
@@ -31,13 +30,8 @@ export const navItems = [
   },
   {
     name: 'My work',
-    link: '#my-work',
-    icon: FaFolderOpen
-  },
-  {
-    name: 'Contact me',
-    link: '#contact',
-    icon: FaPhone
+    link: '#projects',
+    icon: FaBriefcase
   }
 ]
 
@@ -86,13 +80,6 @@ export const infoList = [
     icon: CodeXml
   },
   {
-    key: 'framework-library',
-    title: 'Frameworks & Libraries',
-    description: 'NextJs, ReactJs',
-    iconBlack: PuzzleBlack,
-    icon: Puzzle
-  },
-  {
     key: 'education',
     title: 'Education',
     description: 'Information techlonogy',
@@ -105,5 +92,48 @@ export const infoList = [
     description: 'Built 2 projects',
     iconBlack: BriefCaseBlack,
     icon: BriefCase
+  }
+]
+
+export const toolsAndTechnicals = [
+  {
+    id: 1,
+    section: '#tools',
+    title: 'Tools i use',
+    logo: ['/vscode.svg', '/git.svg', '/intellij.svg', '/gitlab.svg']
+  },
+  {
+    id: 2,
+    section: '#technicals',
+    title: 'Technicals i use',
+    logo: ['/spring-boot.svg', '/nextjs.svg', '/re.svg', '/redux.svg', '/tailwindcss.svg']
+  }
+]
+
+export const toolTitle = 'Tools i use'
+
+export const tools = ['/vscode.svg', '/git.svg', '/intellij.svg', '/gitlab.svg']
+
+export const infoContact = [
+  {
+    id: 1,
+    title: 'Email',
+    des: 'nam71441@gmail.com',
+    logo: FiMail,
+    isLink: false
+  },
+  {
+    id: 2,
+    title: 'Phone',
+    des: '0393150468',
+    logo: FiPhone,
+    isLink: false
+  },
+  {
+    id: 3,
+    title: 'Facebook',
+    des: 'https://www.facebook.com/torischto01.smr',
+    logo: FiFacebook,
+    isLink: true
   }
 ]

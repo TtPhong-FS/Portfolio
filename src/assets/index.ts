@@ -7,6 +7,7 @@ import GlodeBlack from './globe-black.svg'
 import Glode from './globe.svg'
 import GraducationBlack from './graduation-black.svg'
 import Graducation from './graduation-cap.svg'
+import Mail from './mail.svg'
 import Moon from './moon.svg'
 import PuzzleBlack from './puzzle-black.svg'
 import Puzzle from './puzzle.svg'
@@ -21,6 +22,7 @@ export {
   Graducation,
   GraducationBlack,
   ImageMe,
+  Mail,
   Moon,
   Puzzle,
   PuzzleBlack,

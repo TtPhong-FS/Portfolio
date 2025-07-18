@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@/components/theme-provider'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Analytics />
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
           <Toaster position="bottom-right" />
         </ThemeProvider>
       </body>
