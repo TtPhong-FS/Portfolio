@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer id="footer" className="flex gap-8 justify-between mb-8 mt-20 pt-6 items-center">
+    <footer id="footer" className="flex flex-col lg:flex-row gap-8 justify-between mb-8 mt-20 pt-6 items-center">
       <h3 className="text-sm text-center text-gray-800 dark:text-gray-300">
         &copy; {new Date().getFullYear()} TtPhongdev. All right reserved
       </h3>
