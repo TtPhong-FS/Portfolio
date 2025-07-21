@@ -26,7 +26,7 @@ const Hero = () => {
             I am <span className="text-purple"> frontend developer</span> from Hanoi, Vietnam.
           </p>
 
-          <Link href="#projects">
+          <Link href="#projects" className="mt-8 lg:mt-12">
             <ButtonMagic position="right" icon={<BiSolidNavigation />} title="Show my work" />
           </Link>
         </div>

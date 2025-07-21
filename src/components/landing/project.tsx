@@ -12,11 +12,11 @@ const Project = () => {
           Recent <span className="text-purple">my projects</span>
         </h2>
       </div>
-      <div className="flex items-center justify-center lg:flex-row flex-col gap-6 lg:gap-10">
+      <div className="flex items-center justify-center lg:flex-row flex-col gap-8 lg:gap-10">
         {projects.map(({ des, id, img, link, technicals, title }) => (
           <div key={id} className="h-[23rem] flex flex-col items-center justify-center ">
             <PinContainer title={link} href={link}>
-              <div className="flex basis-full flex-col pb-4 px-2 tracking-tight text-slate-100/50 sm:basis-1/2 w-72 lg:w-[20rem] h-[20rem] ">
+              <div className="flex basis-full flex-col pb-4 px-2 tracking-tight text-slate-100/50 sm:basis-1/2 w-80 lg:w-[20rem] h-[20rem] ">
                 <h3 className="max-w-xs !pb-2 !m-0 font-bold text-lg text-black-default dark:text-slate-100">
                   {title}
                 </h3>
