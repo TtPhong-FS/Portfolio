@@ -1,10 +1,13 @@
-import { FaBriefcase, FaHandshake, FaHome, FaUser } from 'react-icons/fa'
-import { FiFacebook, FiMail, FiPhone } from 'react-icons/fi'
+import { FaBriefcase, FaHandshake, FaHome, FaPhone, FaUser } from 'react-icons/fa'
 import {
   BriefCase,
   BriefCaseBlack,
   CodeXml,
   CodeXmlBlack,
+  Facebook,
+  FacebookDark,
+  Github,
+  GithubDark,
   Glode,
   GlodeBlack,
   Graducation,
@@ -27,6 +30,11 @@ export const navItems = [
     name: 'Services',
     link: '#services',
     icon: FaHandshake
+  },
+  {
+    name: 'Contact',
+    link: '#contact',
+    icon: FaPhone
   },
   {
     name: 'My work',
@@ -114,26 +122,17 @@ export const toolTitle = 'Tools i use'
 
 export const tools = ['/vscode.svg', '/git.svg', '/intellij.svg', '/gitlab.svg']
 
-export const infoContact = [
+export const socialMedia = [
   {
     id: 1,
-    title: 'Email',
-    des: 'nam71441@gmail.com',
-    logo: FiMail,
-    isLink: false
+    link: 'https://www.facebook.com/torischto01.smr',
+    icon: Facebook,
+    iconDark: FacebookDark
   },
   {
     id: 2,
-    title: 'Phone',
-    des: '0393150468',
-    logo: FiPhone,
-    isLink: false
-  },
-  {
-    id: 3,
-    title: 'Facebook',
-    des: 'https://www.facebook.com/torischto01.smr',
-    logo: FiFacebook,
-    isLink: true
+    link: 'https://github.com/TtPhong-FS',
+    icon: Github,
+    iconDark: GithubDark
   }
 ]

@@ -3,6 +3,10 @@ import BriefCaseBlack from './briefcase-black.svg'
 import BriefCase from './briefcase-business.svg'
 import CodeXmlBlack from './code-xml-black.svg'
 import CodeXml from './code-xml.svg'
+import FacebookDark from './facebook-dark.svg'
+import Facebook from './facebook.svg'
+import GithubDark from './github-dark.svg'
+import Github from './github.svg'
 import GlodeBlack from './globe-black.svg'
 import Glode from './globe.svg'
 import GraducationBlack from './graduation-black.svg'
@@ -17,6 +21,10 @@ export {
   BriefCaseBlack,
   CodeXml,
   CodeXmlBlack,
+  Facebook,
+  FacebookDark,
+  Github,
+  GithubDark,
   Glode,
   GlodeBlack,
   Graducation,
