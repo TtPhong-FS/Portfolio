@@ -1,3 +1,4 @@
+import { FloatingMenu } from '../floating-menu'
 import About from './about'
 import Contact from './contact'
 import Footer from './footer'
@@ -17,6 +18,9 @@ export default function Landing() {
           <Project />
           <Contact />
           <Footer />
+        </div>
+        <div className="block lg:hidden fixed bottom-12 right-4 z-50">
+          <FloatingMenu />
         </div>
       </main>
     </div>

@@ -13,7 +13,7 @@ import ButtonMagic from '../ui/button-magic'
 
 const schema = z.object({
   fullName: z.string().min(1, 'Please enter your name'),
-  email: z.string({ error: 'Please enter your email' }).regex(Regex.email, 'Email is valid'),
+  email: z.string().min(1, 'Please enter your email').regex(Regex.email, 'Email is valid'),
   notes: z.string().optional().nullable()
 })
 

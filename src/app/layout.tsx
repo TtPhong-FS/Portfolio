@@ -1,3 +1,4 @@
+import FallbackTheme from '@/components/fallback-theme'
 import { ThemeProvider } from '@/components/theme-provider'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from '@vercel/analytics/next'
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Analytics />
           <TooltipProvider>{children}</TooltipProvider>
           <Toaster position="bottom-right" />
+          <FallbackTheme />
         </ThemeProvider>
       </body>
     </html>

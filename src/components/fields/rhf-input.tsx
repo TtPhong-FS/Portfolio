@@ -1,6 +1,6 @@
 import { InputField } from '@/types/field'
 import { Controller, useFormContext } from 'react-hook-form'
-import { ErrorMessage } from '../custom/error-message'
+import { ErrorMessage } from '../error-message'
 import { Input } from '../ui/input'
 
 export function RHFInput({ name, placeholder, className }: InputField) {

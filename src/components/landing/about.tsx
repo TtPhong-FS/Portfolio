@@ -12,12 +12,12 @@ const About = () => {
     <section className="relative z-10 mb-20 lg:mb-32" id="about">
       <div className="text-center mb-16 lg:mb-20">
         <h4 className="mb-2">Introduce</h4>
-        <h2 className="heading">
+        <h2 className="h2">
           About <span className="text-purple">me</span>
         </h2>
       </div>
       <div className="flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-16">
-        <div className="w-56 sm:w-80 rounded-3xl max-w-none shadow-2xl shadow-slate-400">
+        <div className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image src={ImageMe.src} alt="" width={600} height={600} className="w-full rounded-3xl" />
         </div>
         <div className="flex flex-col">

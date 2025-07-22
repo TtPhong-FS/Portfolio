@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  .heading {
+  .h2 {
     @apply font-bold text-3xl md:text-4xl text-center text-black-default dark:text-white;
   }
   .error-message {

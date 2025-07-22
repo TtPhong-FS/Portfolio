@@ -1,4 +1,4 @@
-import { FaBriefcase, FaHandshake, FaHome, FaPhone, FaUser } from 'react-icons/fa'
+import { FaBriefcase, FaHome, FaPhone, FaUser } from 'react-icons/fa'
 import {
   BriefCase,
   BriefCaseBlack,
@@ -26,11 +26,11 @@ export const navItems = [
     link: '#about',
     icon: FaUser
   },
-  {
-    name: 'Services',
-    link: '#services',
-    icon: FaHandshake
-  },
+  // {
+  //   name: 'Services',
+  //   link: '#services',
+  //   icon: FaHandshake
+  // },
   {
     name: 'Contact',
     link: '#contact',
@@ -46,19 +46,12 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
+    tags: ['ReactJs', 'TailwindCss', 'Redux', 'Mysql', 'Spring boot'],
     des: 'A website for shopping products about electronics and technicals.',
     title: 'E-Commerce for technology',
-    img: '/img-techgear-client.png',
-    link: 'https://techgear-silk.vercel.app',
-    technicals: ['/re.svg', '/js.svg', '/tailwindcss.svg', '/redux.svg', '/spring-boot.svg', '/vercel.svg']
-  },
-  {
-    id: 2,
-    des: 'Showcase of my personal projects and the technologies used.',
-    title: 'Portfolio',
-    img: '/portfolio-img.png',
-    link: '/',
-    technicals: ['/nextjs.svg', '/ts.svg', '/tailwindcss.svg', '/vercel.svg', '/aceternity.png']
+    image: '/techgear-home.png',
+    demoUrl: 'https://techgear-silk.vercel.app',
+    githubUrl: 'https://github.com/TtPhong-FS/Ecommerce-techstore-client'
   }
 ]
 
@@ -76,7 +69,7 @@ export const infoList = [
   {
     key: 'basic',
     title: 'Basic',
-    description: 'Html, Css, Scss, TailwindCss',
+    description: 'HTML, CSS, SCSS, Tailwind CSS',
     iconBlack: GlodeBlack,
     icon: Glode
   },
@@ -97,7 +90,7 @@ export const infoList = [
   {
     key: 'projects',
     title: 'Projects',
-    description: 'Built 2 projects',
+    description: 'Built 1 projects',
     iconBlack: BriefCaseBlack,
     icon: BriefCase
   }

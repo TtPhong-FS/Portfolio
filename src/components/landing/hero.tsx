@@ -15,9 +15,9 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="tracking-tighter text-sm text-center text-slate-800 dark:text-blue-100  max-w-80">
+          <h4 className="tracking-tighter text-sm text-center text-slate-800 dark:text-blue-100  max-w-80">
             Hi! I'm Tran Thanh Phong
-          </h2>
+          </h4>
           <TextGenerateEffect
             className="text-center text-3xl md:text-5xl lg:text-6xl text-black-100"
             words="Frontend web developer based in Vietnam."
@@ -27,7 +27,7 @@ const Hero = () => {
           </p>
 
           <Link href="#projects" className="mt-8 lg:mt-12">
-            <ButtonMagic position="right" icon={<BiSolidNavigation />} title="Show my work" />
+            <ButtonMagic position="right" icon={<BiSolidNavigation />} title="Show my projects" />
           </Link>
         </div>
       </div>

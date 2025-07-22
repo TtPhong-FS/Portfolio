@@ -6,13 +6,13 @@ const Contact = () => {
     <section id="contact" className="mb-20 lg:mb-28">
       <div className="text-center mb-16 lg:mb-20">
         <h4 className="mb-2">Connect with me</h4>
-        <h2 className="heading">
+        <h2 className="h2">
           Get in <span className="text-purple">touch</span>
         </h2>
-        <p className="text-center mt-6">
+        <p className="text-sm lg:text-base text-center mt-6">
           Have a good day! If you have any questions, comments, or feedback, please use the form below.
         </p>
-        <ul className="flex flex-col text-gray-400 gap-1 mt-4 items-center justify-center">
+        <ul className="flex flex-col dark:text-gray-300 text-gray-600 gap-1 mt-4 items-center justify-center">
           <li className="flex items-center gap-2">
             <FiMail fontSize={18} />
             <span className="text-sm lg:text-base">nam71441@gmail.com</span>

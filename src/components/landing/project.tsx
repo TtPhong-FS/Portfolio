@@ -1,52 +1,61 @@
 import { projects } from '@/constants'
 import Image from 'next/image'
-import { IoIosSend } from 'react-icons/io'
-import { PinContainer } from '../ui/pin'
+import Link from 'next/link'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import { Badge } from '../ui/badge'
 
 const Project = () => {
   return (
     <section id="projects" className="relative z-20 mb-20 lg:mb-32">
       <div className="text-center mb-16 lg:mb-20">
         <h4 className="mb-2">Some projects</h4>
-        <h2 className="heading">
+        <h2 className="h2">
           Recent <span className="text-purple">my projects</span>
         </h2>
       </div>
-      <div className="flex items-center justify-center lg:flex-row flex-col gap-8 lg:gap-10">
-        {projects.map(({ des, id, img, link, technicals, title }) => (
-          <div key={id} className="h-[23rem] flex flex-col items-center justify-center ">
-            <PinContainer title={link} href={link}>
-              <div className="flex basis-full flex-col pb-4 px-2 tracking-tight text-slate-100/50 sm:basis-1/2 w-80 lg:w-[20rem] h-[20rem] ">
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold text-lg text-black-default dark:text-slate-100">
-                  {title}
-                </h3>
-                <div className="text-sm lg:text-base !p-0 font-normal">
-                  <span className="text-slate-500">{des}</span>
-                </div>
-                <Image src={img} width={600} height={600} alt="des" className="h-full rounded-md flex flex-1 mt-4" />
+      <div>
+        {projects.map((p) => (
+          <div
+            className="max-w-[350px] w-full bg-card border dark:border-gray-800 group rounded-lg overflow-hidden shadow-sm"
+            key={p.id}
+          >
+            <div className="h-48 lg:h-52 overflow-hidden mb-4">
+              <Image
+                className="h-full w-full transition-transform object-cover duration-500 hover:scale-110"
+                src={p.image}
+                height={500}
+                width={500}
+                alt={p.title}
+              />
+            </div>
+            <div className="px-4 pb-4">
+              <div className="flex gap-2 flex-wrap mb-4">
+                {p.tags.map((t, index) => (
+                  <Badge className="p-1 px-2 border-slate-600" variant={'secondary'} key={index}>
+                    {t}
+                  </Badge>
+                ))}
               </div>
-              <div className="flex items-center justify-between px-2 lg:px-4">
-                <div className="flex items-center justify-center">
-                  {technicals.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="h-7 w-7 lg:h-8 lg:w-8 place-items-center place-content-center border-slate-600 border rounded-full bg-transparent"
-                    >
-                      <Image
-                        width={600}
-                        height={600}
-                        alt={`Tech ${index}`}
-                        src={tech}
-                        className="h-4 w-4 lg:h-5 lg:w-5 bg-gray-600 dark:bg-transparent rounded-full"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center gap-1 text-purple">
-                  Check <IoIosSend className="text-lg" />
+
+              <h3 className="text-lg lg:text-xl font-semibold mb-2">{p.title}</h3>
+              <p className="text-sm lg:text-base dark:text-gray-400 text-gray-600 mb-6">{p.des}</p>
+              <div className="flex justify-between items-center">
+                <div className="flex space-x-4">
+                  <Link
+                    className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80 transition-colors duration-300"
+                    href={p.demoUrl}
+                  >
+                    <FaExternalLinkAlt className="w-4 h-4 lg:h-5 lg:w-5" />
+                  </Link>
+                  <Link
+                    className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80"
+                    href={p.githubUrl}
+                  >
+                    <FaGithub className="w-4 h-4 lg:h-5 lg:w-5" />
+                  </Link>
                 </div>
               </div>
-            </PinContainer>
+            </div>
           </div>
         ))}
       </div>

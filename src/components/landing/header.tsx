@@ -1,28 +1,17 @@
-'use client'
-
-import { Moon, Sun } from '@/assets'
 import { navItems } from '@/constants'
 import { cn } from '@/lib/utils'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
 import Link from 'next/link'
+import ThemeToggle from '../theme-toggle'
 
 const Header = () => {
-  const { theme, setTheme } = useTheme()
-
-  const changeTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-    // toast.info('Tính năng đang được phát triển. Vui lòng thử lại sau!')
-  }
-
   return (
     <header className="fixed w-full top-0 z-50 mt-2 lg:mt-4">
       <div className="flex items-center justify-center max-w-7xl mx-auto">
         <h1 className="hidden lg:block text-center md:text-xl text-black-default dark:text-white font-bold">
           TtPhong.dev
         </h1>
-        <nav className="w-full  z-50 flex justify-center lg:justify-center items-center">
-          <ul className="flex h-full items-center shadow-sm gap-5 text-white lg:gap-8 bg-white dark:bg-slate-900 px-6 lg:px-8 py-4 dark:border-none border rounded-full">
+        <nav className="w-full z-50 flex justify-center lg:justify-center items-center">
+          <ul className="flex h-full items-center shadow-sm gap-7 text-white lg:gap-8 bg-white dark:bg-slate-900 px-6 lg:px-8 py-4 dark:border-none border rounded-full">
             {navItems.map((navItem: any, idx: number) => (
               <Link
                 key={`link=${idx}`}
@@ -41,13 +30,9 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <button onClick={changeTheme} className="hidden lg:inline-block">
-          {theme === 'dark' ? (
-            <Image src={Moon.src} alt="" width={600} height={600} className="w-7 h-7" />
-          ) : (
-            <Image src={Sun.src} alt="" width={600} height={600} className="w-7 h-7" />
-          )}
-        </button>
+        <div className="hidden lg:block">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )
