@@ -1,10 +1,18 @@
-import { projects } from '@/constants'
+'use client'
+
+import { projectCategories, projects } from '@/constants'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import { Badge } from '../ui/badge'
 
 const Project = () => {
+  const [activeCategory, setActiveCategory] = useState('all')
+
+  const filterProjects = projects.filter((p) => activeCategory === 'all' || p.category === activeCategory)
+
   return (
     <section id="projects" className="relative z-20 mb-20 lg:mb-32">
       <div className="text-center mb-16 lg:mb-20">
@@ -13,10 +21,26 @@ const Project = () => {
           Recent <span className="text-purple">my projects</span>
         </h2>
       </div>
+      <nav className="mb-8 place-items-center">
+        <ul className="flex gap-2">
+          {projectCategories.map((n) => (
+            <li
+              className={cn(
+                'cursor-pointer px-5 py-2 transition-colors rounded-lg text-sm lg:text-base',
+                n.key === activeCategory ? 'bg-[#2772db]' : 'bg-transparent'
+              )}
+              onClick={() => setActiveCategory(n.key)}
+              key={n.key}
+            >
+              {n.label}
+            </li>
+          ))}
+        </ul>
+      </nav>
       <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((p) => (
+        {filterProjects.map((p) => (
           <div
-            className="max-w-[350px] w-full bg-card border dark:border-gray-800 group rounded-lg overflow-hidden shadow-sm"
+            className="max-w-[350px] h-full w-full bg-card border dark:border-gray-800 group rounded-lg overflow-hidden shadow-sm"
             key={p.id}
           >
             <div className="h-48 lg:h-52 overflow-hidden mb-4">
@@ -31,7 +55,7 @@ const Project = () => {
             <div className="px-4 pb-4">
               <div className="flex gap-2 flex-wrap mb-4">
                 {p.tags.map((t, index) => (
-                  <Badge className="p-1 px-2 border-slate-600" variant={'secondary'} key={index}>
+                  <Badge className="p-1 px-2 border-slate-600 dark:bg-slate-700" variant={'secondary'} key={index}>
                     {t}
                   </Badge>
                 ))}
@@ -42,12 +66,14 @@ const Project = () => {
               <div className="flex justify-between items-center">
                 <div className="flex space-x-4">
                   <Link
+                    target="_blank"
                     className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80 transition-colors duration-300"
                     href={p.demoUrl}
                   >
                     <FaExternalLinkAlt className="w-4 h-4 lg:h-5 lg:w-5" />
                   </Link>
                   <Link
+                    target="_blank"
                     className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80"
                     href={p.githubUrl}
                   >
