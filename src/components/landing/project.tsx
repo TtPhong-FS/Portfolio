@@ -13,7 +13,7 @@ const Project = () => {
           Recent <span className="text-purple">my projects</span>
         </h2>
       </div>
-      <div>
+      <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((p) => (
           <div
             className="max-w-[350px] w-full bg-card border dark:border-gray-800 group rounded-lg overflow-hidden shadow-sm"

@@ -46,12 +46,21 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    tags: ['ReactJs', 'TailwindCss', 'Redux', 'Mysql', 'Spring boot'],
-    des: 'A website for shopping products about electronics and technicals.',
-    title: 'E-Commerce for technology',
+    tags: ['React.js', 'Tailwind CSS', 'Redux Toolkit'],
+    des: 'An advanced eCommerce platform built with Spring Boot and React.js, featuring category trees, search products, shopping cart, basic order system, whitelist, user authentication via JWT',
+    title: 'E-Commerce Website for Tech Products',
     image: '/techgear-home.png',
     demoUrl: 'https://techgear-silk.vercel.app',
     githubUrl: 'https://github.com/TtPhong-FS/Ecommerce-techstore-client'
+  },
+  {
+    id: 2,
+    tags: ['React.js', 'Tailwind CSS', 'Redux Toolkit', 'MySQL', 'Spring Boot', 'Spring Security', 'JWT Auth'],
+    des: 'A dashboard panel for administrators to manage from categories, category attributes to products, orders, and user accounts... Supports dark mode theme, secure login with basic auth context & role-based access.',
+    title: 'Dashboard Panels for E-Commerce',
+    image: '/techgear-dashboard.png',
+    demoUrl: 'https://techgear-dashboard.vercel.app',
+    githubUrl: 'https://github.com/TtPhong-FS/Dashboard-Panel-For-E-Commerce-TechStore'
   }
 ]
 
