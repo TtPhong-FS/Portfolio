@@ -27,7 +27,7 @@ const Project = () => {
             <li
               className={cn(
                 'cursor-pointer px-5 py-2 transition-colors rounded-lg text-sm lg:text-base',
-                n.key === activeCategory ? 'bg-[#2772db]' : 'bg-transparent'
+                n.key === activeCategory ? 'bg-[#2772db] text-white' : 'bg-transparent'
               )}
               onClick={() => setActiveCategory(n.key)}
               key={n.key}

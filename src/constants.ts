@@ -18,7 +18,7 @@ import {
 export const navItems = [
   {
     name: 'Home',
-    link: '#hero',
+    link: '#home',
     icon: FaHome
   },
   {

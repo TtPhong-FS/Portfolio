@@ -1,16 +1,16 @@
 import { navItems } from '@/constants'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
+import { FaHome } from 'react-icons/fa'
 import ThemeToggle from '../theme-toggle'
 
 const Header = () => {
   return (
-    <header className="fixed w-full top-0 z-50 mt-2 lg:mt-4">
+    <header className="fixed w-full top-0 z-50 mt-4 px-4">
       <div className="flex items-center justify-center max-w-7xl mx-auto">
-        <h1 className="hidden lg:block text-center md:text-xl text-black-default dark:text-white font-bold">
-          TtPhong.dev
-        </h1>
-        <nav className="w-full z-50 flex justify-center lg:justify-center items-center">
+        <div className="flex items-center justify-between w-full">
+          <h1 className="block text-center text-xl text-black-default dark:text-white font-bold">TtPhong.dev</h1>
+          <nav className="hidden md:flex w-full z-50 justify-center lg:justify-center items-center">
           <ul className="flex h-full items-center shadow-sm gap-7 text-white lg:gap-8 bg-white dark:bg-slate-900 px-6 lg:px-8 py-4 dark:border-none border rounded-full">
             {navItems.map((navItem: any, idx: number) => (
               <Link
@@ -30,6 +30,10 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+          <Link className="block md:hidden" href={'#home'}>
+            <FaHome size={20} />
+          </Link>
+        </div>
         <div className="hidden lg:block">
           <ThemeToggle />
         </div>

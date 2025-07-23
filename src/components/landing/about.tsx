@@ -30,7 +30,7 @@ const About = () => {
                 return (
                   <li
                     key={key}
-                    className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:-translate-y-2 duration-300 hover:bg-slate-700/30 hover:shadow-slate-700 hover:shadow-xl "
+                    className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:-translate-y-2 duration-300 hover:bg-slate-300/10 dark:hover:bg-slate-700/30 hover:shadow-slate-700 hover:shadow-xl "
                   >
                     <Image
                       width={600}
@@ -57,7 +57,7 @@ const About = () => {
                     return (
                       <li
                         key={index}
-                        className="border-[0.5px] border-gray-400 rounded-xl p-4 cursor-pointer hover:-translate-y-2 duration-300 hover:bg-slate-700/30 hover:shadow-slate-700 hover:shadow-xl "
+                        className="border-[0.5px] border-gray-400 rounded-xl p-4 cursor-pointer hover:-translate-y-2 duration-300 hover:bg-slate-300/10 dark:hover:bg-slate-700/30 hover:shadow-slate-700 hover:shadow-xl "
                       >
                         <Image width={600} height={600} className="w-6 h-6 lg:w-7 lg:h-7" src={item} alt={item} />
                       </li>

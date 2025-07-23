@@ -10,6 +10,7 @@ export default function Landing() {
   return (
     <div className="">
       <Header />
+      <section id="home" />
       <main className="relative flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-8 px-5">
         <div className="max-w-7xl w-full">
           <Hero />
@@ -19,7 +20,7 @@ export default function Landing() {
           <Contact />
           <Footer />
         </div>
-        <div className="block lg:hidden fixed bottom-12 right-4 z-50">
+        <div className="block md:hidden fixed bottom-12 right-4 z-50">
           <FloatingMenu />
         </div>
       </main>
