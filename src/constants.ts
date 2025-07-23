@@ -1,30 +1,15 @@
-import { FaBriefcase, FaHome, FaPhone, FaUser } from 'react-icons/fa'
-import {
-  BriefCase,
-  BriefCaseBlack,
-  CodeXml,
-  CodeXmlBlack,
-  Facebook,
-  FacebookDark,
-  Github,
-  GithubDark,
-  Glode,
-  GlodeBlack,
-  Graducation,
-  GraducationBlack,
-  ImageMe
-} from './assets'
+import { BriefCase, CodeXml, Contact, Facebook, Github, Glode, Graducation, House, ImageMe, Mail } from './assets'
 
 export const navItems = [
   {
     name: 'Home',
     link: '#home',
-    icon: FaHome
+    icon: House
   },
   {
     name: 'About me',
     link: '#about',
-    icon: FaUser
+    icon: Contact
   },
   // {
   //   name: 'Services',
@@ -34,12 +19,12 @@ export const navItems = [
   {
     name: 'Contact',
     link: '#contact',
-    icon: FaPhone
+    icon: Mail
   },
   {
     name: 'My work',
     link: '#projects',
-    icon: FaBriefcase
+    icon: CodeXml
   }
 ]
 
@@ -106,28 +91,24 @@ export const infoList = [
     key: 'basic',
     title: 'Basic',
     description: 'HTML, CSS, SCSS, Tailwind CSS',
-    iconBlack: GlodeBlack,
     icon: Glode
   },
   {
     key: 'language',
     title: 'Language',
     description: 'Java, JavaScript',
-    iconBlack: CodeXmlBlack,
     icon: CodeXml
   },
   {
     key: 'education',
     title: 'Education',
     description: 'Information techlonogy',
-    iconBlack: GraducationBlack,
     icon: Graducation
   },
   {
     key: 'projects',
     title: 'Projects',
     description: 'Built 1 projects',
-    iconBlack: BriefCaseBlack,
     icon: BriefCase
   }
 ]
@@ -155,13 +136,26 @@ export const socialMedia = [
   {
     id: 1,
     link: 'https://www.facebook.com/torischto01.smr',
-    icon: Facebook,
-    iconDark: FacebookDark
+    title: 'Facebook',
+    icon: Facebook
   },
   {
     id: 2,
     link: 'https://github.com/TtPhong-FS',
-    icon: Github,
-    iconDark: GithubDark
+    title: 'Github',
+    icon: Github
   }
+  // {
+  //   id: 3,
+  //   link: 'https://github.com/TtPhong-FS',
+  //   title: 'Github',
+  //   icon: FaLinkedin
+  // }
+]
+
+export const navigation = [
+  { label: 'Home', href: '#home' },
+  { label: 'About me', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' }
 ]

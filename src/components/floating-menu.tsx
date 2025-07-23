@@ -1,7 +1,7 @@
 'use client'
 
+import { Plus } from '@/assets'
 import { navItems } from '@/constants'
-import { Plus } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import ThemeToggle from './theme-toggle'
@@ -35,7 +35,7 @@ export function FloatingMenu() {
         onMouseEnter={() => setOpen(true)}
         className="bg-slate-800 dark:bg-white text-white p-[13px] rounded-lg shadow-lg hover:bg-slate-900 transition"
       >
-        <Plus className="text-white w-5 h-5 dark:text-black-default" />
+        <Plus className="w-5 h-5 dark:text-black-default" />
       </button>
     </div>
   )

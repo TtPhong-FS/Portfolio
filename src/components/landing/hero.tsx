@@ -1,5 +1,5 @@
+import { Navigation } from '@/assets'
 import Link from 'next/link'
-import { BiSolidNavigation } from 'react-icons/bi'
 import ButtonMagic from '../ui/button-magic'
 import { Spotlight } from '../ui/spot-light'
 import { TextGenerateEffect } from '../ui/text-generate-effect'
@@ -27,7 +27,7 @@ const Hero = () => {
           </p>
 
           <Link href="#projects" className="mt-8 lg:mt-12">
-            <ButtonMagic position="right" icon={<BiSolidNavigation />} title="Show my projects" />
+            <ButtonMagic position="right" icon={<Navigation className="h-4 w-4" />} title="Show my projects" />
           </Link>
         </div>
       </div>

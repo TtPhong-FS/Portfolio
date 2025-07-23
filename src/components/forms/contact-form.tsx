@@ -1,10 +1,10 @@
 'use client'
 
+import { Navigation } from '@/assets'
 import { Regex } from '@/utils/regex'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
-import { BiSolidNavigation } from 'react-icons/bi'
 import { toast } from 'sonner'
 import { z } from 'zod'
 import { RHFInput } from '../fields/rhf-input'
@@ -62,7 +62,7 @@ export const ContactForm = () => {
         <div className="flex items-center justify-center mt-8">
           <ButtonMagic
             position="right"
-            icon={<BiSolidNavigation />}
+            icon={<Navigation className="w-4 h-4" />}
             title={isSubmiting ? 'Sending...' : 'Contact now'}
           />
         </div>

@@ -1,11 +1,11 @@
 'use client'
 
+import { External, Github } from '@/assets'
 import { projectCategories, projects } from '@/constants'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import { Badge } from '../ui/badge'
 
 const Project = () => {
@@ -70,14 +70,14 @@ const Project = () => {
                     className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80 transition-colors duration-300"
                     href={p.demoUrl}
                   >
-                    <FaExternalLinkAlt className="w-4 h-4 lg:h-5 lg:w-5" />
+                    <External className="w-5 h-5" />
                   </Link>
                   <Link
                     target="_blank"
                     className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80"
                     href={p.githubUrl}
                   >
-                    <FaGithub className="w-4 h-4 lg:h-5 lg:w-5" />
+                    <Github className="w-5 h-5" />
                   </Link>
                 </div>
               </div>

@@ -26,21 +26,15 @@ const About = () => {
               {infoDescription}
             </p>
             <ul className="grid min-[378px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-4xl">
-              {infoList.map(({ description, iconBlack, icon, key, title }) => {
+              {infoList.map((item) => {
                 return (
                   <li
-                    key={key}
+                    key={item.key}
                     className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:-translate-y-2 duration-300 hover:bg-slate-300/10 dark:hover:bg-slate-700/30 hover:shadow-slate-700 hover:shadow-xl "
                   >
-                    <Image
-                      width={600}
-                      height={600}
-                      className="w-7"
-                      src={theme === 'light' ? iconBlack.src : icon.src}
-                      alt={title}
-                    />
-                    <h3 className="py-3 font-semibold text-gray-500 dark:text-gray-200">{title}</h3>
-                    <p className="text-sm">{description}</p>
+                    <item.icon className="h-7 w-7" />
+                    <h3 className="py-3 font-semibold text-gray-500 dark:text-gray-200">{item.title}</h3>
+                    <p className="text-sm">{item.description}</p>
                   </li>
                 )
               })}

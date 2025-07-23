@@ -1,38 +1,38 @@
 import ImageMe from './anhdd.jpg'
-import BriefCaseBlack from './briefcase-black.svg'
 import BriefCase from './briefcase-business.svg'
-import CodeXmlBlack from './code-xml-black.svg'
 import CodeXml from './code-xml.svg'
-import FacebookDark from './facebook-dark.svg'
+import Contact from './contact.svg'
+import External from './external.svg'
 import Facebook from './facebook.svg'
-import GithubDark from './github-dark.svg'
 import Github from './github.svg'
-import GlodeBlack from './globe-black.svg'
 import Glode from './globe.svg'
-import GraducationBlack from './graduation-black.svg'
 import Graducation from './graduation-cap.svg'
+import House from './house.svg'
 import Mail from './mail.svg'
 import Moon from './moon.svg'
-import PuzzleBlack from './puzzle-black.svg'
+import Navigation from './navigation.svg'
+import Phone from './phone.svg'
+import Plus from './plus.svg'
 import Puzzle from './puzzle.svg'
-import Sun from './sun-medium.svg'
+import Share from './share-2.svg'
+import Sun from './sun.svg'
 export {
   BriefCase,
-  BriefCaseBlack,
   CodeXml,
-  CodeXmlBlack,
+  Contact,
+  External,
   Facebook,
-  FacebookDark,
   Github,
-  GithubDark,
   Glode,
-  GlodeBlack,
   Graducation,
-  GraducationBlack,
+  House,
   ImageMe,
   Mail,
   Moon,
+  Navigation,
+  Phone,
+  Plus,
   Puzzle,
-  PuzzleBlack,
+  Share,
   Sun
 }

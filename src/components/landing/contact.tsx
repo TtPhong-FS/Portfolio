@@ -1,4 +1,4 @@
-import { FiMail, FiPhone } from 'react-icons/fi'
+import { Mail, Phone } from '@/assets'
 import { ContactForm } from '../forms/contact-form'
 
 const Contact = () => {
@@ -14,11 +14,11 @@ const Contact = () => {
         </p>
         <ul className="flex flex-col dark:text-gray-300 text-gray-600 gap-1 mt-4 items-center justify-center">
           <li className="flex items-center gap-2">
-            <FiMail fontSize={18} />
+            <Mail className="w-5 h-5" />
             <span className="text-sm lg:text-base">nam71441@gmail.com</span>
           </li>
           <li className="flex items-center gap-2">
-            <FiPhone fontSize={18} />
+            <Phone className="w-5 h-5" />
             <span className="text-sm lg:text-base">0393150468</span>
           </li>
         </ul>
