@@ -6,7 +6,7 @@ import ThemeToggle from '../theme-toggle'
 
 const Header = () => {
   return (
-    <header className="fixed w-full top-0 z-50 mt-4 px-4">
+    <header className="fixed w-full top-0 z-50 py-4 px-4 bg-white dark:bg-black-100">
       <div className="flex items-center justify-center max-w-7xl mx-auto">
         <div className="flex items-center justify-between w-full">
           <h1 className="block text-center text-xl text-black-default dark:text-white font-bold">TtPhong.dev</h1>
