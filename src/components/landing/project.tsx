@@ -1,7 +1,8 @@
 'use client'
 
-import { External, Github } from '@/assets'
-import { projectCategories, projects } from '@/constants'
+import Github from '@/assets/Github'
+import { projectData } from '@/data/projectData'
+import { ExternalIcon } from '@/icons'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,7 +12,7 @@ import { Badge } from '../ui/badge'
 const Project = () => {
   const [activeCategory, setActiveCategory] = useState('all')
 
-  const filterProjects = projects.filter((p) => activeCategory === 'all' || p.category === activeCategory)
+  const filterProjects = projectData.projects.filter((p) => activeCategory === 'all' || p.category === activeCategory)
 
   return (
     <section id="projects" className="relative z-20 mb-20 lg:mb-32">
@@ -23,7 +24,7 @@ const Project = () => {
       </div>
       <nav className="mb-8 place-items-center">
         <ul className="flex gap-2">
-          {projectCategories.map((n) => (
+          {projectData.categories.map((n) => (
             <li
               className={cn(
                 'cursor-pointer px-5 py-2 transition-colors rounded-lg text-sm lg:text-base',
@@ -70,7 +71,7 @@ const Project = () => {
                     className="dark:hover:text-slate-300 hover:text-slate-600 text-foreground/80 transition-colors duration-300"
                     href={p.demoUrl}
                   >
-                    <External className="w-5 h-5" />
+                    <ExternalIcon size={20} />
                   </Link>
                   <Link
                     target="_blank"

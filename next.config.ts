@@ -5,15 +5,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  allowedDevOrigins: ['192.168.1.11'],
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js'
-      }
-    }
-  }
+  allowedDevOrigins: ['192.168.1.11']
 }
 
 export default nextConfig

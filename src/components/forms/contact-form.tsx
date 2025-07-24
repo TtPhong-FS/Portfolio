@@ -1,6 +1,6 @@
 'use client'
 
-import { Navigation } from '@/assets'
+import { NavigationIcon } from '@/icons'
 import { Regex } from '@/utils/regex'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
@@ -10,7 +10,6 @@ import { z } from 'zod'
 import { RHFInput } from '../fields/rhf-input'
 import RHFTextArea from '../fields/rhf-textarea'
 import ButtonMagic from '../ui/button-magic'
-
 const schema = z.object({
   fullName: z.string().min(1, 'Please enter your name'),
   email: z.string().min(1, 'Please enter your email').regex(Regex.email, 'Email is valid'),
@@ -62,7 +61,7 @@ export const ContactForm = () => {
         <div className="flex items-center justify-center mt-8">
           <ButtonMagic
             position="right"
-            icon={<Navigation className="w-4 h-4" />}
+            icon={<NavigationIcon size={20} />}
             title={isSubmiting ? 'Sending...' : 'Contact now'}
           />
         </div>

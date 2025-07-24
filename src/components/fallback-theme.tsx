@@ -7,7 +7,7 @@ export default function FallbackTheme() {
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    if (theme !== 'dark' && theme !== 'light') {
+    if (theme !== 'dark' && theme !== 'light' && theme !== 'system') {
       setTheme('dark')
     }
   }, [theme])

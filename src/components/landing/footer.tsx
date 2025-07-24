@@ -1,8 +1,8 @@
 'use client'
 
-import { CodeXml, Navigation, Share } from '@/assets'
-import { navigation, socialMedia } from '@/constants'
+import { navigations, socialMedia } from '@/constants'
 import footerData from '@/data/footerData'
+import { CodeIcon, NavigationIcon, ShareIcon } from '@/icons'
 import Link from 'next/link'
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip'
 
@@ -13,7 +13,7 @@ const Footer = () => {
         <div>
           <h3 className="flex items-center text-2xl font-bold mb-2 gap-2">
             <span className="text-black-default fill-black-default">
-              <CodeXml className="w-6 h-6" />
+              <CodeIcon size={20} className="text-black-default dark:text-white" />
             </span>
             {footerData.brand.name}
           </h3>
@@ -22,22 +22,22 @@ const Footer = () => {
 
         <div>
           <h4 className="flex items-center gap-2 text-lg font-semibold mb-3">
-            <Navigation className="w-5 h-5" />
+            <NavigationIcon size={20} />
             Navigation
           </h4>
           <ul className="flex flex-col gap-2 text-sm">
-            {navigation.map((item, index) => (
+            {navigations.map((item, index) => (
               <li key={index}>
-                <a href={item.href} className="hover:text-blue-600 dark:hover:text-blue-400 transition">
-                  {item.label}
-                </a>
+                <Link href={item.link} className="hover:text-blue-600 dark:hover:text-blue-400 transition">
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
           <h4 className="flex items-center gap-2 text-lg font-semibold mb-3">
-            <Share className="w-6 h-6" />
+            <ShareIcon size={20} />
             Find Me Online
           </h4>
           <ul className="flex gap-4 items-center">
@@ -51,7 +51,7 @@ const Footer = () => {
                     <item.icon className="w-5 h-5" />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent className="bg-slate-800 text-white">
                   <p>{item.title}</p>
                 </TooltipContent>
               </Tooltip>

@@ -10,8 +10,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'TtPhong portfolio',
-  description: 'A Website for portfolio personal'
+  title: 'Portfolio - TtPhongdev',
+  description: ''
 }
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Analytics />
           <TooltipProvider>{children}</TooltipProvider>
           <Toaster position="bottom-right" />

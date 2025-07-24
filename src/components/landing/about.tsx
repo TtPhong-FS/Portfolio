@@ -1,13 +1,10 @@
 'use client'
 
 import { ImageMe } from '@/assets'
-import { infoDescription, infoList, toolsAndTechnicals } from '@/constants'
-import { useTheme } from 'next-themes'
+import { aboutData } from '@/data/aboutData'
 import Image from 'next/image'
 
 const About = () => {
-  const { theme } = useTheme()
-
   return (
     <section className="relative z-10 mb-20 lg:mb-32" id="about">
       <div className="text-center mb-16 lg:mb-20">
@@ -23,10 +20,10 @@ const About = () => {
         <div className="flex flex-col">
           <div className="flex-1">
             <p className="text-sm lg:text-base mb-10 max-w-2xl tracking-tighter text-black-100 dark:text-gray-300">
-              {infoDescription}
+              {aboutData.des}
             </p>
             <ul className="grid min-[378px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-4xl">
-              {infoList.map((item) => {
+              {aboutData.meItems.map((item) => {
                 return (
                   <li
                     key={item.key}
@@ -41,7 +38,7 @@ const About = () => {
             </ul>
           </div>
           <div className="flex-1 lg:flex items-center justify-start gap-8">
-            {toolsAndTechnicals.map(({ id, logo, title, section }) => (
+            {aboutData.toolsAndTechnicals.map(({ id, logo, title, section }) => (
               <section key={id} id={section}>
                 <p className="text-sm lg:text-base mt-8 mb-3 max-w-2xl tracking-tighter text-gray-600 dark:text-gray-300 text-start">
                   {title}
