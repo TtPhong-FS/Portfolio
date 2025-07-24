@@ -68,7 +68,6 @@ const Header = () => {
           >
             {navigations
               .map((nav) => {
-                debugger
                 let isVisit = activeId === nav.key
                 return (
                   <Link
@@ -77,7 +76,7 @@ const Header = () => {
                     onClick={() => setActiveId(nav.key)}
                     className={cn(
                       'p-[13px] rounded-lg dark:shadow-lg shadow-md dark:shadow-gray-400 shadow-gray-500 text-xs',
-                      isVisit ? 'bg-purple' : ''
+                      isVisit ? 'bg-purple' : 'bg-white dark:bg-black-default'
                     )}
                   >
                     <Tooltip>
