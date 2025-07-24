@@ -43,7 +43,7 @@ const Header = () => {
               </ul>
             </nav>
             <Link
-              className={cn('block md:hidden p-[13px] rounded-lg', activeId === 'home' ? 'bg-purple' : '')}
+              className={cn('block md:hidden p-[13px] rounded-lg', activeId === 'home' ? 'bg-purple text-white' : '')}
               href={'#home'}
               onClick={() => setActiveId('home')}
             >
@@ -89,7 +89,7 @@ const Header = () => {
                 )
               })
               .splice(1, 3)}
-            <div className="bg-white dark:bg-black-100 p-[11px] rounded-lg dark:shadow-lg shadow-md dark:shadow-gray-400 shadow-gray-500 text-xs">
+            <div className="bg-white dark:bg-black-100 rounded-lg dark:shadow-lg shadow-md dark:shadow-gray-400 shadow-gray-500 text-xs">
               <ThemeToggle />
             </div>
           </div>

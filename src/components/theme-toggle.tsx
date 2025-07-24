@@ -52,7 +52,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <button onClick={toggleTheme} className="place-items-start place-content-start flex">
+    <button onClick={toggleTheme} className="place-items-start place-content-start flex lg:p-0 p-[11px]">
       <Tooltip delayDuration={200}>
         <TooltipTrigger asChild>{renderIcon()}</TooltipTrigger>
         <TooltipContent className="bg-slate-800 text-white">{renderLabel()}</TooltipContent>
