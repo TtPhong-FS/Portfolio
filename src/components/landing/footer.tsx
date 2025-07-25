@@ -45,6 +45,7 @@ const Footer = () => {
               <Tooltip delayDuration={200} key={item.id}>
                 <TooltipTrigger asChild>
                   <Link
+                    target="_blank"
                     className="block place-items-center place-content-center p-[10px] bg-black-100/80 dark:bg-white/15 rounded-md text-white"
                     href={item.link}
                   >

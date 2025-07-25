@@ -10,7 +10,8 @@ export default function FallbackTheme() {
     if (theme !== 'dark' && theme !== 'light' && theme !== 'system') {
       setTheme('dark')
     }
-  }, [theme])
+  }, [theme, setTheme])
+  
 
   return null
 }

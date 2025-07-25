@@ -2,11 +2,9 @@ type ButtonMagic = {
   title: string
   position: string
   icon: React.ReactNode
-  otherClasses?: string
-  handleClick?: () => void
 }
 
-export default function ButtonMagic({ title, position, handleClick, icon, otherClasses }: ButtonMagic) {
+export default function ButtonMagic({ title, position, icon }: ButtonMagic) {
   return (
     <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none w-full md:w-52">
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />

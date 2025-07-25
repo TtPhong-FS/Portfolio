@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="flex w-full z-50 justify-center lg:justify-center items-center">
       <ul className="flex h-full items-center shadow-sm bg-white dark:bg-slate-900 dark:border-none p-2 rounded-lg">
         {navigations.map((nav) => {
-          let isVisit = activeId === nav.key
+          const isVisit = activeId === nav.key
           return (
             <Link
               key={`link=${nav.key}`}

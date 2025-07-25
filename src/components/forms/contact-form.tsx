@@ -29,7 +29,7 @@ export const ContactForm = () => {
     resolver: zodResolver(schema)
   })
 
-  const handleSubmit = methods.handleSubmit(async (values) => {
+  const handleSubmit = methods.handleSubmit(async () => {
     setisSubmiting(true)
 
     setTimeout(() => {
