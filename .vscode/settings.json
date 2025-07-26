@@ -4,6 +4,9 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true, 
   "editor.formatOnSaveMode": "file",
-  "files.autoSave": "onFocusChange",
-  "vs-code-prettier-eslint.prettierLast": false
+  "vs-code-prettier-eslint.prettierLast": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.fontSize": 15
 }
