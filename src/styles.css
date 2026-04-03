@@ -3,17 +3,31 @@
 @import "@ttpfs/ui-react/global.css";
 @plugin "@tailwindcss/typography";
 
-@source "./components/**/*.{ts,tsx}";
+@source "./**/*.{ts,tsx}";
 
-@theme {
+@theme inline {
 	--font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+	--animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@keyframes spotlight {
+	0% {
+		opacity: 0;
+		transform: translate(-72%, -62%) scale(0.5);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, -40%) scale(1);
+	}
 }
 
 @layer components {
-	.header {
-		@apply sticky z-20 top-0 mx-auto md:px-8 px-4 bg-white dark:bg-black;
-	}
-	.footer {
-		@apply sticky bottom-0 z-20 px-4 md:px-8 py-10 mx-auto bg-gray-50 dark:bg-neutral-900;
+	.input-group {
+		@apply rounded-lg;
 	}
 }

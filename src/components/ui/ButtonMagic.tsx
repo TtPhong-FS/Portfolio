@@ -1,0 +1,34 @@
+import { cn } from "@ttpfs/ui-react";
+
+type ButtonMagic = {
+	title: string;
+	position: string;
+	icon: React.ReactNode;
+	type?: "submit" | "button";
+	className?: string;
+};
+
+export function ButtonMagic({
+	title,
+	type = "button",
+	position,
+	className,
+	icon,
+}: ButtonMagic) {
+	return (
+		<button
+			className={cn(
+				"relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none w-full md:w-52",
+				className,
+			)}
+			type={type}
+		>
+			<span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+			<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-white dark:bg-slate-950 px-6 py-1 gap-2 text-sm font-medium text-black-default dark:text-white backdrop-blur-3xl">
+				{position === "left" && icon}
+				{title}
+				{position === "right" && icon}
+			</span>
+		</button>
+	);
+}

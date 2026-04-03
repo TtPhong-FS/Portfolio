@@ -1,9 +1,9 @@
+import { Footer, Header } from "@/components";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Separator, ThemeProvider } from "@ttpfs/ui-react";
-import appCss from "../styles.css?url";
-import "../styles.css";
 import "../bootstrap";
-import { Footer, Header } from "@/components";
+import "../styles.css";
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -22,7 +22,7 @@ export const Route = createRootRoute({
 				name: "viewport",
 			},
 			{
-				title: "Trần Thanh Phong - Portfolio",
+				title: "TtPhong.dev",
 			},
 		],
 	}),
@@ -41,13 +41,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 					disableTransitionOnChange
 					enableSystem
 				>
-					<Header />
-					<Separator />
-					<main className="grid h-full grid-rows-[auto_1fr] px-4 md:px-8">
-						{children}
-					</main>
-					<Separator className="mt-20" />
-					<Footer />
+					<div className="relative">
+						<Header />
+						<Separator />
+						<main className="grid z-10 grid-rows-[auto_1fr]">{children}</main>
+						<Footer />
+					</div>
 					<Scripts />
 				</ThemeProvider>
 			</body>

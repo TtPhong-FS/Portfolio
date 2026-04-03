@@ -1,20 +1,93 @@
 import { Link } from "@tanstack/react-router";
-import { Icon, ThemeSwitcher } from "@ttpfs/ui-react";
+import { cn, Icon, ThemeSwitcher } from "@ttpfs/ui-react";
+import { useEffect, useState } from "react";
+
+const navigations = [
+	{
+		key: "home",
+		link: "#home",
+		name: "Home",
+	},
+	{
+		key: "about",
+		link: "#about",
+		name: "About me",
+	},
+	// {
+	//   name: 'Services',
+	//   link: '#services',
+	//   icon: FaHandshake
+	// },
+	{
+		key: "contact",
+		link: "#contact",
+		name: "Contact",
+	},
+	{
+		key: "projects",
+		link: "#projects",
+		name: "Projects",
+	},
+];
 
 export function Header() {
-	return (
-		<header className="header backdrop-blur-lg">
-			<nav className="page-wrap flex flex-wrap items-center gap-x-3 gap-y-2 py-3 sm:py-4">
-				<h2 className="m-0 flex-shrink-0 text-base font-semibold tracking-tight">
-					<Link className="button button--primary font-semibold" to="/">
-						<span className="h-2 w-2 rounded-full bg-white" />
-						TtPhong.dev
-					</Link>
-				</h2>
+	const [activeId, setActiveId] = useState<string | null>(null);
 
-				<div className="ml-auto flex items-center gap-1.5 sm:ml-0 sm:gap-2">
+	useEffect(() => {
+		const sections = document.querySelectorAll("section[id]");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const visible = entries.find((e) => e.isIntersecting);
+				if (visible) {
+					setActiveId(visible.target.id);
+				}
+			},
+			{
+				rootMargin: "-50% 0px -50% 0px",
+			},
+		);
+
+		sections.forEach((el) => {
+			observer.observe(el);
+		});
+
+		return () => observer.disconnect();
+	}, []);
+	return (
+		<header className="sticky top-0 z-20 w-full backdrop-blur-md">
+			<div className="flex h-16 items-center justify-between px-4 sm:h-20 md:px-8">
+				<Link to="/">
+					<h1 className="block text-center text-lg md:text-xl text-black-default dark:text-white font-bold">
+						TtPhong.dev
+					</h1>
+				</Link>
+
+				<nav className="hidden md:flex">
+					<ul className="flex h-full items-center shadow-md bg-neutral-50 dark:bg-neutral-900 p-2 rounded-2xl">
+						{navigations.map((item) => {
+							const isActive = item.key === activeId;
+							return (
+								<a
+									className={cn(
+										"px-6 py-2.5 rounded-3xl",
+										isActive
+											? "dark:bg-white/10 bg-black/5 text-black dark:text-white font-medium"
+											: "",
+									)}
+									href={item.link}
+									id={item.link}
+									key={item.key}
+								>
+									{item.name}
+								</a>
+							);
+						})}
+					</ul>
+				</nav>
+				<div className="items-center md:gap-2 flex">
 					<a
-						className="hidden rounded-xl p-2 text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)] sm:inline-flex"
+						className="hidden rounded-xl p-2 transition sm:inline-flex"
 						href="https://www.facebook.com/torischto01.smr"
 						rel="noreferrer"
 						target="_blank"
@@ -23,7 +96,7 @@ export function Header() {
 						<Icon name="facebook" size="xl" variant="color" />
 					</a>
 					<a
-						className="hidden rounded-xl p-2 text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)] sm:inline-flex"
+						className="hidden rounded-xl p-2 transition sm:inline-flex"
 						href="https://github.com/TtPhong-FS"
 						rel="noreferrer"
 						target="_blank"
@@ -44,16 +117,7 @@ export function Header() {
 						variant="ghost"
 					/>
 				</div>
-
-				<div className="order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
-					<Link activeProps={{ className: "nav-link is-active" }} to="/">
-						Home
-					</Link>
-					<Link activeProps={{ className: "nav-link is-active" }} to="/about">
-						About
-					</Link>
-				</div>
-			</nav>
+			</div>
 		</header>
 	);
 }
