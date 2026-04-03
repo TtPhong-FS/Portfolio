@@ -6,7 +6,9 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"auto-close-tag.fullMode": true,
-	"cSpell.words": [],
+	"cSpell.words": [
+		"iconify"
+	],
 	"css.validate": false,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.biome": "explicit",

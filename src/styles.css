@@ -3,6 +3,8 @@
 @import "@ttpfs/ui-react/global.css";
 @plugin "@tailwindcss/typography";
 
+@source "./components/**/*.{ts,tsx}";
+
 @theme {
 	--font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }

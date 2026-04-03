@@ -1,10 +1,9 @@
-import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-
+import { Separator, ThemeProvider } from "@ttpfs/ui-react";
 import appCss from "../styles.css?url";
+import "../styles.css";
+import "../bootstrap";
+import { Footer, Header } from "@/components";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -23,7 +22,7 @@ export const Route = createRootRoute({
 				name: "viewport",
 			},
 			{
-				title: "TanStack Start Starter",
+				title: "Trần Thanh Phong - Portfolio",
 			},
 		],
 	}),
@@ -36,22 +35,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
-				<Header />
-				{children}
-				<Footer />
-				<TanStackDevtools
-					config={{
-						position: "bottom-right",
-					}}
-					plugins={[
-						{
-							name: "Tanstack Router",
-							render: <TanStackRouterDevtoolsPanel />,
-						},
-					]}
-				/>
-				<Scripts />
+			<body className="font-sans antialiased h-screen">
+				<ThemeProvider
+					attribute={"class"}
+					disableTransitionOnChange
+					enableSystem
+				>
+					<Header />
+					<Separator />
+					<main className="grid h-full grid-rows-[auto_1fr]">{children}</main>
+					<Separator className="mt-20" />
+					<Footer />
+					<Scripts />
+				</ThemeProvider>
 			</body>
 		</html>
 	);
