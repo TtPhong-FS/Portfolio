@@ -43,7 +43,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				>
 					<Header />
 					<Separator />
-					<main className="grid h-full grid-rows-[auto_1fr]">{children}</main>
+					<main className="grid h-full grid-rows-[auto_1fr] px-4 md:px-8">
+						{children}
+					</main>
 					<Separator className="mt-20" />
 					<Footer />
 					<Scripts />

@@ -3,7 +3,7 @@ import { Icon, ThemeSwitcher } from "@ttpfs/ui-react";
 
 export function Header() {
 	return (
-		<header className="sticky top-0 z-50 bg-[var(--header-bg)] px-4 backdrop-blur-lg">
+		<header className="header backdrop-blur-lg">
 			<nav className="page-wrap flex flex-wrap items-center gap-x-3 gap-y-2 py-3 sm:py-4">
 				<h2 className="m-0 flex-shrink-0 text-base font-semibold tracking-tight">
 					<Link className="button button--primary font-semibold" to="/">
