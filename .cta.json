@@ -1,0 +1,17 @@
+{
+  "addOnOptions": {},
+  "chosenAddOns": [
+    "biome"
+  ],
+  "envVarValues": {},
+  "framework": "react",
+  "git": false,
+  "includeExamples": false,
+  "mode": "file-router",
+  "packageManager": "pnpm",
+  "projectName": "portfolio",
+  "routerOnly": false,
+  "tailwind": true,
+  "typescript": true,
+  "version": 1
+}
