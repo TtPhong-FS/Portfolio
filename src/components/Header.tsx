@@ -1,67 +1,27 @@
-import { Link } from "@tanstack/react-router";
-import { cn, Icon, ThemeSwitcher } from "@ttpfs/ui-react";
+import { navigations } from "@/constants";
+import { useRouterState } from "@tanstack/react-router";
+import { cn, Icon, ThemeSwitcher, Tooltip } from "@ttpfs/ui-react";
 import { useEffect, useState } from "react";
-
-const navigations = [
-	{
-		key: "home",
-		link: "#home",
-		name: "Home",
-	},
-	{
-		key: "about",
-		link: "#about",
-		name: "About me",
-	},
-	// {
-	//   name: 'Services',
-	//   link: '#services',
-	//   icon: FaHandshake
-	// },
-	{
-		key: "contact",
-		link: "#contact",
-		name: "Contact",
-	},
-	{
-		key: "projects",
-		link: "#projects",
-		name: "Projects",
-	},
-];
+import { HeaderMenu } from "./HeaderMenu";
 
 export function Header() {
 	const [activeId, setActiveId] = useState<string | null>(null);
 
+	const location = useRouterState({ select: (s) => s.location });
+
 	useEffect(() => {
-		const sections = document.querySelectorAll("section[id]");
+		const id = location.hash?.replace("#", "") ?? "";
+		setActiveId(id);
+	}, [location.hash]);
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				const visible = entries.find((e) => e.isIntersecting);
-				if (visible) {
-					setActiveId(visible.target.id);
-				}
-			},
-			{
-				rootMargin: "-50% 0px -50% 0px",
-			},
-		);
-
-		sections.forEach((el) => {
-			observer.observe(el);
-		});
-
-		return () => observer.disconnect();
-	}, []);
 	return (
-		<header className="sticky top-0 z-20 w-full backdrop-blur-md">
+		<header className="w-full backdrop-blur-md">
 			<div className="flex h-16 items-center justify-between px-4 sm:h-20 md:px-8">
-				<Link to="/">
-					<h1 className="block text-center text-lg md:text-xl text-black-default dark:text-white font-bold">
+				<a href="/">
+					<h1 className="block text-center text-md md:text-lg text-black-default dark:text-white font-bold">
 						TtPhong.dev
 					</h1>
-				</Link>
+				</a>
 
 				<nav className="hidden md:flex">
 					<ul className="flex h-full items-center shadow-md bg-neutral-50 dark:bg-neutral-900 p-2 rounded-2xl">
@@ -85,30 +45,38 @@ export function Header() {
 						})}
 					</ul>
 				</nav>
-				<div className="items-center md:gap-2 flex">
-					<a
-						className="hidden rounded-xl p-2 transition sm:inline-flex"
-						href="https://www.facebook.com/torischto01.smr"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<span className="sr-only">Follow Me on Facebook</span>
-						<Icon name="facebook" size="xl" variant="color" />
-					</a>
-					<a
-						className="hidden rounded-xl p-2 transition sm:inline-flex"
-						href="https://github.com/TtPhong-FS"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<span className="sr-only">Go to Portfolio GitHub</span>
-						<Icon
-							className="dark:fill-white"
-							name="github"
-							size="xl"
-							variant="outline"
-						/>
-					</a>
+				<div className="items-center hidden md:gap-2 md:flex">
+					<Tooltip>
+						<Tooltip.Trigger>
+							<a
+								className="rounded-xl p-2 transition inline-flex"
+								href="https://www.facebook.com/torischto01.smr"
+								rel="noreferrer"
+								target="_blank"
+							>
+								<Icon name="facebook" size="xl" variant="color" />
+							</a>
+						</Tooltip.Trigger>
+						<Tooltip.Content>Follow Me on Facebook</Tooltip.Content>
+					</Tooltip>
+					<Tooltip>
+						<Tooltip.Trigger>
+							<a
+								className="rounded-xl p-2 transition inline-flex"
+								href="https://github.com/TtPhong-FS"
+								rel="noreferrer"
+								target="_blank"
+							>
+								<Icon
+									className="dark:fill-white"
+									name="github"
+									size="xl"
+									variant="outline"
+								/>
+							</a>
+						</Tooltip.Trigger>
+						<Tooltip.Content>Go to GitHub Profile</Tooltip.Content>
+					</Tooltip>
 					<ThemeSwitcher
 						className={{
 							root: "h-10 w-10",
@@ -116,6 +84,10 @@ export function Header() {
 						}}
 						variant="ghost"
 					/>
+				</div>
+
+				<div className="block md:hidden">
+					<HeaderMenu />
 				</div>
 			</div>
 		</header>

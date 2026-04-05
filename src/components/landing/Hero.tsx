@@ -1,48 +1,54 @@
-import { heroData } from "@/data/heroData";
-import { cn, Icon } from "@ttpfs/ui-react";
+import { Icon } from "@ttpfs/ui-react";
 import type React from "react";
 import { ButtonMagic, Spotlight, TextGenerateEffect } from "../ui";
 
 export const Hero: React.FC = () => {
 	return (
 		<section id="home">
-			<div className="relative flex h-[40rem] w-full overflow-hidden rounded-md bg-white/[0.96] dark:bg-black/[0.96] antialiased md:items-center md:justify-center">
-				<div
-					className={cn(
-						"pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
-						"[background-image:linear-gradient(to_right,#f5f5f5_1px,transparent_1px),linear-gradient(to_bottom,#f5f5f5_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]",
-					)}
-				/>
+			<div className="relative flex h-[45rem] overflow-hidden lg:h-[55rem] w-full rounded-md antialiased md:items-center md:justify-center">
+				<Spotlight className="-top-60 left-1/5 text-neutral-100 dark:text-neutral-50" />
 
-				<Spotlight
-					className="-top-40 left-0 md:-top-20 md:left-60"
-					fill="white"
-				/>
-				<Spotlight
-					className="top-10 left-full h-[80vh] w-[50vw]"
-					fill="purple"
-				/>
-				<Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
-
-				<div className="relative z-10 mx-auto w-full max-w-6xl p-4 pt-20 md:pt-0 flex flex-col items-center justify-center">
-					<h4 className="tracking-tighter text-sm md:text-base text-center text-neutral-800 dark:text-neutral-50">
-						{heroData.iam}
-					</h4>
-					<TextGenerateEffect
-						className="text-center text-lg md:text-2xl text-black dark:text-white"
-						words={heroData.textGenerate}
-					/>
-					<p className="bg-opacity-50 mt-6 mb-8 bg-gradient-to-b from-neutral-500 to-neutral-800 dark:from-neutral-50 dark:to-neutral-400 bg-clip-text text-center text-2xl font-bold text-transparent md:text-6xl">
-						I am <span className="text-purple"> frontend devloper</span> from
-						Hanoi, Vietnam.
+				<div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-24 flex flex-col items-center text-center">
+					<p className="text-sm md:text-base text-neutral-500 dark:text-neutral-400">
+						Tran Thanh Phong · Hanoi, Vietnam
 					</p>
-					<a href="#projects">
-						<ButtonMagic
-							icon={<Icon name="navigation" />}
-							position="right"
-							title="Show my projects"
-						/>
-					</a>
+
+					<TextGenerateEffect
+						className="mt-3 text-3xl md:text-5xl font-semibold tracking-tight text-black dark:text-white"
+						words="Fullstack Engineer building end-to-end product features"
+					/>
+
+					<p className="mt-4 max-w-xl text-sm md:text-base text-neutral-600 dark:text-neutral-400">
+						Specialized in React, TanStack, React hook form and design systems
+						on the frontend. Java with Spring Boot and API design, System
+						Architecture on the backend. Focused on performance and
+						maintainability.
+					</p>
+
+					<div className="mt-8 max-w-md w-full flex-col md:flex-row flex justify-center gap-4 md:gap-8">
+						<a className="flex-1" href="#projects">
+							<ButtonMagic variant="border-magic">
+								<Icon name="navigation" />
+								View Projects
+							</ButtonMagic>
+						</a>
+
+						<a className="flex-1" href="#contact">
+							<ButtonMagic
+								className="h-12 flex items-center justify-center gap-2"
+								variant="sketch"
+							>
+								<Icon name="phone" />
+								Contact
+							</ButtonMagic>
+						</a>
+					</div>
+
+					<div className="flex mt-4 text-sm text-neutral-500 dark:text-neutral-400 gap-1.5">
+						<span>~1 năm kinh nghiệm</span>
+						<span>·</span>
+						<span>3+ projects</span>
+					</div>
 				</div>
 			</div>
 		</section>

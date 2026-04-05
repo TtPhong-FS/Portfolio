@@ -1,4 +1,5 @@
 import { Footer, Header } from "@/components";
+import { NotFoundPage } from "@/pages";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Separator, ThemeProvider } from "@ttpfs/ui-react";
 import "../bootstrap";
@@ -26,6 +27,7 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
+	notFoundComponent: NotFoundPage,
 	shellComponent: RootDocument,
 });
 
@@ -35,20 +37,20 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="font-sans antialiased h-screen">
+			<body className="font-sans antialiased relative">
 				<ThemeProvider
 					attribute={"class"}
 					disableTransitionOnChange
 					enableSystem
 				>
-					<div className="relative">
+					<div className="sticky top-0 z-20 ">
 						<Header />
-						<Separator />
-						<main className="grid z-10 grid-rows-[auto_1fr]">{children}</main>
-						<Footer />
 					</div>
-					<Scripts />
+					<Separator />
+					<main className="grid z-10 grid-rows-[auto_1fr]">{children}</main>
+					<Footer />
 				</ThemeProvider>
+				<Scripts />
 			</body>
 		</html>
 	);

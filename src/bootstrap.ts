@@ -15,6 +15,7 @@ declare module "@ttpfs/ui-react" {
 		intellijIdea: IconDefinition;
 		redux: IconDefinition;
 		navigation: IconDefinition;
+		terminal: IconDefinition;
 	}
 }
 
@@ -54,6 +55,9 @@ registerIcons({
 	},
 	tailwindcss: {
 		color: "icon-[logos--tailwindcss-icon]",
+	},
+	terminal: {
+		outline: "icon-[lucide--square-terminal]",
 	},
 	vscode: {
 		color: "icon-[logos--visual-studio-code]",
