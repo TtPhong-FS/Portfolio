@@ -9,7 +9,7 @@ interface Props {
 export const PracticeExampleCard: React.FC<Props> = (props) => {
 	const { codeblock, preview } = props;
 	return (
-		<Tabs className="w-full">
+		<Tabs>
 			<Tabs.List aria-label="preview" className="w-fit *:h-8 *:w-fit *:px-4">
 				<Tabs.Tab className="gap-1.5" id="preview">
 					<Tabs.Icon />
@@ -22,11 +22,11 @@ export const PracticeExampleCard: React.FC<Props> = (props) => {
 					Code
 				</Tabs.Tab>
 			</Tabs.List>
-			<Tabs.Panel className="pt-4" id="preview">
+			<Tabs.Panel className="pt-4 px-0" id="preview">
 				{preview}
 			</Tabs.Panel>
-			<Tabs.Panel className="pt-4" id="code">
-				<div className="w-full">{codeblock}</div>
+			<Tabs.Panel className="pt-4 px-0" id="code">
+				{codeblock}
 			</Tabs.Panel>
 		</Tabs>
 	);

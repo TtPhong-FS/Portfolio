@@ -1,7 +1,7 @@
 export const navigations = [
 	{
 		key: "home",
-		link: "#home",
+		link: "/",
 		name: "Home",
 	},
 	{
@@ -29,4 +29,13 @@ export const navigations = [
 		link: "#contact",
 		name: "Contact",
 	},
+];
+
+export const sectionIds = [
+	"home",
+	"about",
+	"skills",
+	"examples",
+	"projects",
+	"contact",
 ];

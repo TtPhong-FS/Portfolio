@@ -1,12 +1,13 @@
 import { navigations } from "@/constants";
 import { Icon, Separator } from "@ttpfs/ui-react";
+import { Social } from "./Social";
 
 export function Footer() {
 	const year = new Date().getFullYear();
 
 	return (
 		<footer
-			className="py-6 bg-gray-50 dark:bg-neutral-900 sticky z-20 md:py-8 px-4 md:px-8"
+			className="py-6 bg-neutral-50 dark:bg-neutral-900 sticky z-20 md:py-8 px-4 md:px-8"
 			id="footer"
 		>
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-3 place-items-start">
@@ -40,61 +41,11 @@ export function Footer() {
 						))}
 					</ul>
 				</div>
-				{/* <div className="flex items-center ml-auto gap-3">
-					<a
-						className="hidden rounded-xl text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)] sm:inline-flex"
-						href="https://www.facebook.com/torischto01.smr"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<span className="sr-only">Follow Me on Facebook</span>
-						<Icon name="facebook" size="2xl" variant="color" />
-					</a>
-					<a
-						className="hidden rounded-xl text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)] sm:inline-flex"
-						href="https://github.com/TtPhong-FS"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<span className="sr-only">Go to Portfolio GitHub</span>
-						<Icon
-							className="dark:fill-white"
-							name="github"
-							size="2xl"
-							variant="color"
-						/>
-					</a>
-				</div> */}
 				<div className="md:ml-auto">
-					<h6 className="text-neutral-500 text-sm mb-0.5 dark:text-neutral-300">
+					<h6 className="text-neutral-500 text-sm mb-2 dark:text-neutral-300">
 						Contact me through:
 					</h6>
-					<ul className="grid gap-1place-items-center">
-						<a
-							className="flex items-center w-fit py-0.5 hover:underline gap-2"
-							href="mailto:nam71441@gmail.com"
-						>
-							<Icon
-								className="text-neutral-500 dark:text-neutral-400"
-								name="mail"
-							/>
-							<span className="text-sm text-neutral-500 dark:text-neutral-400">
-								nam71441@gmail.com
-							</span>
-						</a>
-						<a
-							className="flex items-center w-fit py-0.5 hover:underline gap-2"
-							href="tel:+84393150468"
-						>
-							<Icon
-								className="text-neutral-500 dark:text-neutral-400"
-								name="phone"
-							/>
-							<span className="text-sm text-neutral-500 dark:text-neutral-400">
-								0393150468
-							</span>
-						</a>
-					</ul>
+					<Social />
 				</div>
 			</div>
 			<Separator className="my-8" />

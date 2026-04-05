@@ -16,7 +16,7 @@ export const PracticeExampleForm: React.FC<Props> = (props) => {
 		<div>
 			<div className="space-y-3">
 				<h3 className="text-lg md:text-xl font-semibold tracking-tight text-black dark:text-white">
-					User Form Handling
+					Form Handling
 				</h3>
 				<p className="text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-md">
 					Demonstrating type-safe validation, controlled form state, and async
@@ -24,7 +24,7 @@ export const PracticeExampleForm: React.FC<Props> = (props) => {
 				</p>
 			</div>
 
-			<div className="mt-12">
+			<div className="mt-8">
 				<PracticeExampleCard
 					codeblock={
 						<Tabs className="w-full" variant="secondary">
@@ -44,8 +44,8 @@ export const PracticeExampleForm: React.FC<Props> = (props) => {
 							<Tabs.Panel className="pt-4 px-0" id="form">
 								<CodeBlock
 									code={UserProfileSetupFormCode}
-									filename="UserProfileSetupForm.jsx"
-									language="jsx"
+									filename="UserProfileSetupForm.tsx"
+									language="tsx"
 								/>
 							</Tabs.Panel>
 							<Tabs.Panel className="pt-4 px-0" id="schema">

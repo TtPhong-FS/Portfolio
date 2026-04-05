@@ -7,13 +7,13 @@ export const GraduationTimeline = () => {
 		{
 			content: (
 				<div>
-					<p className="mb-8 text-xs tracking-tight font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+					<p className="mb-8 text-sm tracking-tight font-normal text-neutral-800 md:text-base dark:text-neutral-200">
 						Built internal reusable frontend libraries based on
 						<b> HeroUI</b>, <b> React Hook Form</b>, and <b> TanStack Table</b>,
 						focusing on standardization and scalability across projects for
 						frontend.
 					</p>
-					<p className="mb-8 text-xs tracking-tight font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+					<p className="mb-8 text-sm tracking-tight font-normal text-neutral-800 md:text-base dark:text-neutral-200">
 						On the backend side, developed an <b> RSQL parser </b> with a query
 						DSL inspired by <b> jOOQ to support </b> flexible and
 						<b> expressive querying </b>.
@@ -55,7 +55,7 @@ export const GraduationTimeline = () => {
 		{
 			content: (
 				<div>
-					<p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+					<p className="mb-8 text-sm font-normal text-neutral-800 md:text-base dark:text-neutral-200">
 						Joined{" "}
 						<b>
 							<span className="text-red-600">IZONE</span> (IELTS Chiến Lược)
@@ -101,20 +101,28 @@ export const GraduationTimeline = () => {
 		{
 			content: (
 				<div>
-					<p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+					<p className="mb-4 text-sm font-normal text-neutral-800 md:text-base dark:text-neutral-200">
 						Studied Information Technology at Hanoi Polytechnic College.
 					</p>
 					<div className="mb-8 space-y-2">
-						<div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-							<Icon name="bookmark-check" /> Maintained a <b>GPA of 3.8</b>
+						<div className="flex items-start gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
+							<Icon name="bookmark-check" />
+							<span>
+								Maintained a<b> GPA of 3.8</b>
+							</span>
 						</div>
-						<div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-							<Icon name="bookmark-check" /> with strong interest in Database
-							Systems and Web Development
+						<div className="flex items-start gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
+							<Icon name="bookmark-check" />
+							<span>
+								with strong interest in Database Systems and Web Development
+							</span>
 						</div>
-						<div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-							<Icon name="bookmark-check" /> Completed a graduation project as
-							part of the final academic requirement
+						<div className="flex items-start gap-2 text-sm text-neutral-700 md:text-base dark:text-neutral-300">
+							<Icon name="bookmark-check" />
+							<span>
+								Completed a graduation project as part of the final academic
+								requirement
+							</span>
 						</div>
 					</div>
 				</div>
@@ -124,14 +132,14 @@ export const GraduationTimeline = () => {
 	];
 
 	return (
-		<div className="relative w-full overflow-clip rounded-lg bg-neutral-50 dark:bg-neutral-950 font-sans">
-			<div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
+		<div className="relative w-full overflow-clip rounded-2xl font-sans">
+			<div className="max-w-7xl mx-auto">
 				<TypewriterEffect
-					className="mb-4 text-neutral-700 dark:text-neutral-200 text-left text-lg"
+					className="md:text-3xl lg:text-4xl text-neutral-700 dark:text-neutral-200 text-left text-2xl"
 					words={words}
 				/>
-				<div className="flex flex-col gap-4 md:gap-8 lg:flex-row w-full">
-					<p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-xl">
+				<div className="flex mt-4 flex-col gap-4 md:gap-8 lg:flex-row w-full">
+					<p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base lg:text-lg max-w-xl">
 						I &apos;ve been on my journey for the past few years. I spent 3.5
 						years in college, maintaining a GPA of 3.8, and have recently gained
 						8 months of hands-on industry experience. Here&apos;s a timeline of

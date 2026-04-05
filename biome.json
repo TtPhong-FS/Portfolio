@@ -54,7 +54,8 @@
 		"enabled": true,
 		"rules": {
 			"complexity": {
-				"noBannedTypes": "off"
+				"noBannedTypes": "off",
+				"noImportantStyles": "off"
 			},
 			"correctness": {
 				"noEmptyPattern": "off",

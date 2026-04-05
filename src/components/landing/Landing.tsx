@@ -16,7 +16,7 @@ export const Landing: React.FC<Props> = (props) => {
 			<ShootingStars />
 			<StarsBackground />
 
-			<div className="relative z-10">
+			<div className="relative grid z-10">
 				<Hero />
 				<About />
 				<Skills />

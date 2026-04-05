@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
-@import "@ttpfs/ui-react/global.css";
+@import "@ttpfs/ui-react/styles.css";
+@import "@ttpfs/form-react/styles.css";
+@import "@ttpfs/table-react/styles.css";
 @plugin "@tailwindcss/typography";
 
+@source "./features/**/*.{ts,tsx}";
+@source "./components/**/*.{ts,tsx}";
 @source "./**/*.{ts,tsx}";
 
 @theme inline {
@@ -19,6 +23,14 @@
 html,
 body {
 	background-color: white;
+}
+
+section {
+	scroll-margin-top: 96px;
+}
+
+#home {
+	scroll-margin-top: 0 !important;
 }
 
 .dark {

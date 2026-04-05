@@ -51,7 +51,10 @@ export const TypewriterEffect = ({
 						<div className="inline-block" key={`word-${idx}`}>
 							{word.text.map((char, index) => (
 								<motion.span
-									className={cn(`opacity-0 hidden`, word.className)}
+									className={cn(
+										`dark:text-white text-black opacity-0 hidden`,
+										word.className,
+									)}
 									initial={{}}
 									key={`char-${index}`}
 								>
@@ -68,7 +71,7 @@ export const TypewriterEffect = ({
 	return (
 		<div
 			className={cn(
-				"text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center",
+				"text-base sm:text-xl md:text-3xl lg:text-5xl flex items-center font-bold text-center",
 				className,
 			)}
 		>

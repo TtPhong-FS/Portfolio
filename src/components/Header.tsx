@@ -1,23 +1,12 @@
-import { navigations } from "@/constants";
-import { Link, useLocation } from "@tanstack/react-router";
-import { cn, Icon, ThemeSwitcher, Tooltip } from "@ttpfs/ui-react";
-import { useEffect, useState } from "react";
+import { navigations, sectionIds } from "@/constants";
+import { useObserverSection } from "@/hooks";
+import { Link } from "@tanstack/react-router";
+import { cn, ThemeSwitcher } from "@ttpfs/ui-react";
 import { HeaderMenu } from "./HeaderMenu";
+import { Social } from "./Social";
 
 export function Header() {
-	const [activeId, setActiveId] = useState<string | null>(null);
-
-	const location = useLocation();
-
-	useEffect(() => {
-		const id = location.hash?.replace("#", "") ?? "";
-
-		if (id) {
-			setActiveId(id);
-		} else {
-			setActiveId("home");
-		}
-	}, [location.hash]);
+	const sectionId = useObserverSection(sectionIds);
 
 	return (
 		<header className="w-full backdrop-blur-md">
@@ -28,60 +17,32 @@ export function Header() {
 					</h1>
 				</Link>
 
-				<nav className="hidden md:flex">
+				<nav className="hidden lg:flex">
 					<ul className="flex h-full items-center shadow-md bg-neutral-50 dark:bg-neutral-900 p-2 rounded-2xl">
 						{navigations.map((item) => {
-							const isActive = item.key === activeId;
+							const isActive = item.key === sectionId;
 							return (
-								<a
+								<Link
 									className={cn(
 										"px-6 py-2.5 rounded-3xl",
 										isActive
 											? "dark:bg-white/10 bg-black/5 text-black dark:text-white font-medium"
 											: "",
 									)}
-									href={item.link}
 									id={item.link}
 									key={item.key}
+									to={item.link}
 								>
 									{item.name}
-								</a>
+								</Link>
 							);
 						})}
 					</ul>
 				</nav>
-				<div className="items-center hidden md:gap-2 md:flex">
-					<Tooltip>
-						<Tooltip.Trigger>
-							<a
-								className="rounded-xl p-2 transition inline-flex"
-								href="https://www.facebook.com/torischto01.smr"
-								rel="noreferrer"
-								target="_blank"
-							>
-								<Icon name="facebook" size="xl" variant="color" />
-							</a>
-						</Tooltip.Trigger>
-						<Tooltip.Content>Follow Me on Facebook</Tooltip.Content>
-					</Tooltip>
-					<Tooltip>
-						<Tooltip.Trigger>
-							<a
-								className="rounded-xl p-2 transition inline-flex"
-								href="https://github.com/TtPhong-FS"
-								rel="noreferrer"
-								target="_blank"
-							>
-								<Icon
-									className="dark:fill-white"
-									name="github"
-									size="xl"
-									variant="outline"
-								/>
-							</a>
-						</Tooltip.Trigger>
-						<Tooltip.Content>Go to GitHub Profile</Tooltip.Content>
-					</Tooltip>
+				<div className="items-center hidden md:gap-4 lg:gap-5 md:flex">
+					<div className="hidden md:block">
+						<Social />
+					</div>
 					<ThemeSwitcher
 						className={{
 							root: "h-10 w-10",

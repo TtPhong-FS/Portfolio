@@ -60,11 +60,7 @@ export const ContactForm: React.FC<Props> = (props) => {
 				/>
 			</Grid>
 			<div className="place-items-center mt-6 w-full grid">
-				<ButtonMagic
-					className="h-14! md:h-12!"
-					type="submit"
-					variant="border-magic"
-				>
+				<ButtonMagic type="submit" variant="border-magic">
 					<Icon name="navigation" />
 					Contact now
 				</ButtonMagic>

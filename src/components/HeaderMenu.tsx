@@ -1,13 +1,7 @@
 import { navigations } from "@/constants";
-import {
-	cn,
-	Drawer,
-	Icon,
-	Separator,
-	ThemeSwitcher,
-	Tooltip,
-} from "@ttpfs/ui-react";
+import { cn, Drawer, Icon, Separator, ThemeSwitcher } from "@ttpfs/ui-react";
 import type React from "react";
+import { Social } from "./Social";
 
 interface Props {}
 
@@ -46,39 +40,7 @@ export const HeaderMenu: React.FC<Props> = (props) => {
 				<div className="grid w-full gap-4">
 					<Separator />
 					<div className="flex justify-between items-center w-full">
-						<div className="items-center gap-4 flex">
-							<Tooltip>
-								<Tooltip.Trigger>
-									<a
-										className="rounded-xl transition inline-flex"
-										href="https://www.facebook.com/torischto01.smr"
-										rel="noreferrer"
-										target="_blank"
-									>
-										<Icon name="facebook" size="2xl" variant="color" />
-									</a>
-								</Tooltip.Trigger>
-								<Tooltip.Content>Follow Me on Facebook</Tooltip.Content>
-							</Tooltip>
-							<Tooltip>
-								<Tooltip.Trigger>
-									<a
-										className="rounded-xl transition inline-flex"
-										href="https://github.com/TtPhong-FS"
-										rel="noreferrer"
-										target="_blank"
-									>
-										<Icon
-											className="dark:fill-white"
-											name="github"
-											size="2xl"
-											variant="outline"
-										/>
-									</a>
-								</Tooltip.Trigger>
-								<Tooltip.Content>Go to GitHub Profile</Tooltip.Content>
-							</Tooltip>
-						</div>
+						<Social />
 						<ThemeSwitcher
 							className={{
 								root: "h-10 w-10",

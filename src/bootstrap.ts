@@ -16,6 +16,7 @@ declare module "@ttpfs/ui-react" {
 		redux: IconDefinition;
 		navigation: IconDefinition;
 		terminal: IconDefinition;
+		zalo: IconDefinition;
 	}
 }
 
@@ -61,5 +62,8 @@ registerIcons({
 	},
 	vscode: {
 		color: "icon-[logos--visual-studio-code]",
+	},
+	zalo: {
+		outline: "icon-[simple-icons--zalo]",
 	},
 });

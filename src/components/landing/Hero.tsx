@@ -1,20 +1,34 @@
-import { Icon } from "@ttpfs/ui-react";
+import { cn, Icon } from "@ttpfs/ui-react";
 import type React from "react";
+import { SectionContainer } from "../SectionContainer";
 import { ButtonMagic, Spotlight, TextGenerateEffect } from "../ui";
 
 export const Hero: React.FC = () => {
 	return (
-		<section id="home">
-			<div className="relative flex h-[45rem] overflow-hidden lg:h-[55rem] w-full rounded-md antialiased md:items-center md:justify-center">
-				<Spotlight className="-top-60 left-1/5 text-neutral-100 dark:text-neutral-50" />
+		<div className="relative">
+			<div
+				className={cn(
+					"absolute inset-0",
+					"[background-size:40px_40px]",
+					"[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+					"dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+				)}
+			/>
+			<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
 
-				<div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-24 flex flex-col items-center text-center">
+			<SectionContainer
+				className="md:h-[35rem] relative flex items-center justify-center"
+				id="home"
+			>
+				<Spotlight className="md:left-5 md:-top-70 lg:-top-60 lg:left-1/5 left-10 -top-40 text-neutral-100 dark:text-neutral-50" />
+
+				<div className="z-10 flex flex-col items-center text-center">
 					<p className="text-sm md:text-base text-neutral-500 dark:text-neutral-400">
 						Tran Thanh Phong · Hanoi, Vietnam
 					</p>
 
 					<TextGenerateEffect
-						className="mt-3 text-3xl md:text-5xl font-semibold tracking-tight text-black dark:text-white"
+						className="mt-3 text-4xl max-w-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-black dark:text-white"
 						words="Fullstack Engineer building end-to-end product features"
 					/>
 
@@ -50,7 +64,7 @@ export const Hero: React.FC = () => {
 						<span>3+ projects</span>
 					</div>
 				</div>
-			</div>
-		</section>
+			</SectionContainer>
+		</div>
 	);
 };
