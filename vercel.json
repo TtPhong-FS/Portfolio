@@ -1,7 +1,7 @@
 {
 	"buildCommand": "pnpm build",
 	"framework": "vite",
-	"installCommand": "pnpm install --frozen-lockfile",
+	"installCommand": "rm -rf node_modules pnpm-lock.yaml ~/.pnpm-store ; pnpm install",
 	"outputDirectory": "dist",
 	"rewrites": [
 		{
