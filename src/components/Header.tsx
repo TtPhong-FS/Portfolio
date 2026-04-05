@@ -22,19 +22,19 @@ export function Header() {
 						{navigations.map((item) => {
 							const isActive = item.key === sectionId;
 							return (
-								<Link
+								<a
 									className={cn(
 										"px-6 py-2.5 rounded-3xl",
 										isActive
 											? "dark:bg-white/10 bg-black/5 text-black dark:text-white font-medium"
 											: "",
 									)}
+									href={item.link}
 									id={item.link}
 									key={item.key}
-									to={item.link}
 								>
 									{item.name}
-								</Link>
+								</a>
 							);
 						})}
 					</ul>
