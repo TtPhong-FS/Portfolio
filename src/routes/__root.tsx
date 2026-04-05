@@ -2,10 +2,10 @@ import { Footer, Header } from "@/components";
 import { NotFoundPage } from "@/pages";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Separator, ThemeProvider } from "@ttpfs/ui-react";
+import { Analytics } from "@vercel/analytics/react";
 import "../bootstrap";
 import "../styles.css";
 import appCss from "../styles.css?url";
-
 export const Route = createRootRoute({
 	head: () => ({
 		links: [
@@ -38,6 +38,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<HeadContent />
 			</head>
 			<body className="font-sans antialiased relative">
+				<Analytics />
 				<ThemeProvider
 					attribute={"class"}
 					disableTransitionOnChange

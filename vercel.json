@@ -1,6 +1,0 @@
-{
-	"buildCommand": "sh scripts/vercel-build.sh",
-	"framework": "vite",
-	"installCommand": "echo skip install",
-	"outputDirectory": "dist"
-}
