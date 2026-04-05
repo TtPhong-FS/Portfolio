@@ -1,12 +1,23 @@
 {
 	"buildCommand": "pnpm build",
 	"framework": "vite",
+	"functions": {
+		"dist/server/server.js": {
+			"maxDuration": 10,
+			"runtime": "vercel-node@20.3.1"
+		}
+	},
 	"installCommand": "rm -rf node_modules pnpm-lock.yaml ~/.pnpm-store ; pnpm install",
 	"outputDirectory": "dist",
-	"rewrites": [
+	"routes": [
 		{
-			"destination": "/server.js",
-			"source": "/(.*)"
+			"dest": "dist/server/server.js",
+			"src": "/(.*)"
+		},
+		{
+			"dest": "/dist/client/assets/$1",
+			"src": "/assets/(.*)"
 		}
-	]
+	],
+	"version": 2
 }
