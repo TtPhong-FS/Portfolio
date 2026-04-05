@@ -16,8 +16,8 @@
 	box-sizing: border-box;
 }
 
+html,
 body {
-	position: relative;
 	background-color: white;
 }
 

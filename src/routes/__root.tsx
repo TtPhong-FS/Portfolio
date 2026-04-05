@@ -1,58 +1,14 @@
-import { Footer, Header } from "@/components";
-import { NotFoundPage } from "@/pages";
-import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { Separator, ThemeProvider } from "@ttpfs/ui-react";
-import { Analytics } from "@vercel/analytics/react";
-import "../bootstrap";
-import "../styles.css";
-import appCss from "../styles.css?url";
-export const Route = createRootRoute({
-	head: () => ({
-		links: [
-			{
-				href: appCss,
-				rel: "stylesheet",
-			},
-		],
-		meta: [
-			{
-				charSet: "utf-8",
-			},
-			{
-				content: "width=device-width, initial-scale=1",
-				name: "viewport",
-			},
-			{
-				title: "TtPhong.dev",
-			},
-		],
-	}),
-	notFoundComponent: NotFoundPage,
-	shellComponent: RootDocument,
-});
+import { RootLayout } from "@/layout/RootLayout";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { NotificationProvider } from "@ttpfs/ui-react";
 
-function RootDocument({ children }: { children: React.ReactNode }) {
-	return (
-		<html lang="en" suppressHydrationWarning>
-			<head>
-				<HeadContent />
-			</head>
-			<body className="font-sans antialiased relative">
-				<Analytics />
-				<ThemeProvider
-					attribute={"class"}
-					disableTransitionOnChange
-					enableSystem
-				>
-					<div className="sticky top-0 z-20 ">
-						<Header />
-					</div>
-					<Separator />
-					<main className="grid z-10 grid-rows-[auto_1fr]">{children}</main>
-					<Footer />
-				</ThemeProvider>
-				<Scripts />
-			</body>
-		</html>
-	);
-}
+export const Route = createRootRoute({
+	component: () => (
+		<>
+			<NotificationProvider placement="top end" />
+			<RootLayout>
+				<Outlet />
+			</RootLayout>
+		</>
+	),
+});

@@ -1,5 +1,5 @@
 import { navigations } from "@/constants";
-import { useRouterState } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { cn, Icon, ThemeSwitcher, Tooltip } from "@ttpfs/ui-react";
 import { useEffect, useState } from "react";
 import { HeaderMenu } from "./HeaderMenu";
@@ -7,21 +7,26 @@ import { HeaderMenu } from "./HeaderMenu";
 export function Header() {
 	const [activeId, setActiveId] = useState<string | null>(null);
 
-	const location = useRouterState({ select: (s) => s.location });
+	const location = useLocation();
 
 	useEffect(() => {
 		const id = location.hash?.replace("#", "") ?? "";
-		setActiveId(id);
+
+		if (id) {
+			setActiveId(id);
+		} else {
+			setActiveId("home");
+		}
 	}, [location.hash]);
 
 	return (
 		<header className="w-full backdrop-blur-md">
 			<div className="flex h-16 items-center justify-between px-4 sm:h-20 md:px-8">
-				<a href="/">
+				<Link to="/">
 					<h1 className="block text-center text-md md:text-lg text-black-default dark:text-white font-bold">
 						TtPhong.dev
 					</h1>
-				</a>
+				</Link>
 
 				<nav className="hidden md:flex">
 					<ul className="flex h-full items-center shadow-md bg-neutral-50 dark:bg-neutral-900 p-2 rounded-2xl">
