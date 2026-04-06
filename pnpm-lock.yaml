@@ -15,14 +15,14 @@ importers:
         specifier: ^1.132.0
         version: 1.167.12(@tanstack/react-router@1.168.10(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@7.3.1(@types/node@22.19.17)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))
       '@ttpfs/form-react':
-        specifier: 0.3.2
-        version: 0.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)
+        specifier: 0.3.3
+        version: 0.3.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)
       '@ttpfs/table-react':
         specifier: ^0.2.2
         version: 0.2.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       '@ttpfs/ui-react':
-        specifier: 1.4.2
-        version: 1.4.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+        specifier: 1.4.3
+        version: 1.4.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.6.1(react@19.2.4)
@@ -2264,8 +2264,8 @@ packages:
       '@types/react-dom':
         optional: true
 
-  '@ttpfs/form-react@0.3.2':
-    resolution: {integrity: sha512-h30uBikmoBczvZ3AHztZhH0PRUOLD2CcagwrReVmBC9eT2V734ftBnZ88WGG6NSWTekyg1FcJbE75zA/6BibIQ==}
+  '@ttpfs/form-react@0.3.3':
+    resolution: {integrity: sha512-7J+QxvU6VfvhP+aUy8DWDQ3RHOYT6EYCEWn+9uBzGULCxlcv+ThxCuWb73nqL0Je21FZP8yYvPODEG2Ft+lllA==}
     peerDependencies:
       react: ^19
       react-dom: ^19
@@ -2282,6 +2282,17 @@ packages:
   '@ttpfs/ui-react@1.4.2':
     resolution: {integrity: sha512-LtSlyi2IlkY4K5ku9bDLQhlOvlYxqksEGAcliuQTUOhYQr4WZhGZsIDAkyU0IhaV/1D0LdVg5OZFgzsMKTR+dA==}
     peerDependencies:
+      react: ^19
+      react-dom: ^19
+      tailwindcss: ^4
+
+  '@ttpfs/ui-react@1.4.3':
+    resolution: {integrity: sha512-BQXf1Tw/GcG9FI4IjkTLrGqIee0i6UnBG0muAdIveGvw2WdbmT4z4JSZlFtbJjHrJDSHkjJhhdJwb0trNujT8w==}
+    peerDependencies:
+      '@iconify-json/logos': ^1.2.10
+      '@iconify-json/lucide': ^1.2.86
+      '@iconify-json/svg-spinners': ^1.2.4
+      '@iconify/tailwind4': ^1.2.1
       react: ^19
       react-dom: ^19
       tailwindcss: ^4
@@ -3158,6 +3169,10 @@ packages:
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
+
+  slugify@1.6.9:
+    resolution: {integrity: sha512-vZ7rfeehZui7wQs438JXBckYLkIIdfHOXsaVEUMyS5fHo1483l1bMdo0EDSWYclY0yZKFOipDy4KHuKs6ssvdg==}
+    engines: {node: '>=8.0.0'}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -6012,16 +6027,21 @@ snapshots:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@ttpfs/form-react@0.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)':
+  '@ttpfs/form-react@0.3.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)':
     dependencies:
       '@hookform/resolvers': 5.2.2(react-hook-form@7.72.0(react@19.2.4))
-      '@ttpfs/ui-react': 1.4.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+      '@ttpfs/ui-react': 1.4.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       react-hook-form: 7.72.0(react@19.2.4)
+      slugify: 1.6.9
       tailwindcss: 4.2.2
       zod: 4.3.6
     transitivePeerDependencies:
+      - '@iconify-json/logos'
+      - '@iconify-json/lucide'
+      - '@iconify-json/svg-spinners'
+      - '@iconify/tailwind4'
       - '@types/react'
       - '@types/react-dom'
       - tailwind-merge
@@ -6042,6 +6062,28 @@ snapshots:
     dependencies:
       '@heroui/react': 3.0.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.2)
       '@heroui/styles': 3.0.1(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+      class-variance-authority: 0.7.1
+      date-fns: 4.1.0
+      next-themes: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      radix-ui: 1.4.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      react-medium-image-zoom: 5.4.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      tailwindcss: 4.2.2
+      tw-animate-css: 1.4.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - tailwind-merge
+
+  '@ttpfs/ui-react@1.4.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)':
+    dependencies:
+      '@heroui/react': 3.0.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.2)
+      '@heroui/styles': 3.0.1(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+      '@iconify-json/logos': 1.2.11
+      '@iconify-json/lucide': 1.2.101
+      '@iconify-json/svg-spinners': 1.2.4
+      '@iconify/tailwind4': 1.2.3(tailwindcss@4.2.2)
       class-variance-authority: 0.7.1
       date-fns: 4.1.0
       next-themes: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -7045,6 +7087,8 @@ snapshots:
   seroval@1.5.2: {}
 
   siginfo@2.0.0: {}
+
+  slugify@1.6.9: {}
 
   source-map-js@1.2.1: {}
 
