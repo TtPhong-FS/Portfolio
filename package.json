@@ -2,9 +2,9 @@
 	"dependencies": {
 		"@tanstack/react-router": "^1.132.0",
 		"@tanstack/router-plugin": "^1.132.0",
-		"@ttpfs/form-react": "0.3.4",
-		"@ttpfs/table-react": "^0.2.3",
-		"@ttpfs/ui-react": "1.4.4",
+		"@ttpfs/form-react": "0.3.5",
+		"@ttpfs/table-react": "0.2.4",
+		"@ttpfs/ui-react": "1.4.5",
 		"@vercel/analytics": "^1.5.0",
 		"motion": "^12.38.0",
 		"react": "^19.2.1",

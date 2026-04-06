@@ -15,14 +15,14 @@ importers:
         specifier: ^1.132.0
         version: 1.167.12(@tanstack/react-router@1.168.10(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@7.3.1(@types/node@22.19.17)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))
       '@ttpfs/form-react':
-        specifier: 0.3.4
-        version: 0.3.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)
+        specifier: 0.3.5
+        version: 0.3.5(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)
       '@ttpfs/table-react':
-        specifier: ^0.2.3
-        version: 0.2.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+        specifier: ^0.2.4
+        version: 0.2.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       '@ttpfs/ui-react':
-        specifier: 1.4.4
-        version: 1.4.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+        specifier: 1.4.5
+        version: 1.4.5(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.6.1(react@19.2.4)
@@ -2264,23 +2264,23 @@ packages:
       '@types/react-dom':
         optional: true
 
-  '@ttpfs/form-react@0.3.4':
-    resolution: {integrity: sha512-l514nfgkb41331HeYpLQz7AzEGNQ62LSyk4DBCddDUGawn0FRdWR7AIgYrOteyTY0vPS7h9wb/2x1rYU9MVMwg==}
+  '@ttpfs/form-react@0.3.5':
+    resolution: {integrity: sha512-6uWhDhLfsYYUG/3Fu8bKa+wkgejPDqlHTdoVyUTyl2RyNBpOi7vfdr/XjTDcUWEVjx3XZOMbzfXGh+z0klupkg==}
     peerDependencies:
       react: ^19
       react-dom: ^19
       tailwindcss: ^4
       zod: ^4
 
-  '@ttpfs/table-react@0.2.3':
-    resolution: {integrity: sha512-zbgZKNHnA12PvoArLVARLxzuS2z1/yy24px4RYHxxS4gWN69jaUkkscAFqZqM8UECRIQsYHlQNgyh694/+n2lA==}
+  '@ttpfs/table-react@0.2.4':
+    resolution: {integrity: sha512-bOheVgW1FZWNokudexNYeDzxaz2iHyyk2/0rG4CtfFGSMb4bHREN4EHuOoJtQ9jGIPKHT8zPYhQzqYVA05AZ/A==}
     peerDependencies:
       react: ^19
       react-dom: ^19
       tailwindcss: ^4
 
-  '@ttpfs/ui-react@1.4.4':
-    resolution: {integrity: sha512-nwrT8pipjzfwtPqZmWj5l3T5Aq4ZjLNaVEmFyYAaIxPEVjc4nTDTN+drS45HxJditBQUmJ7+mKkNp7qbL5QUrA==}
+  '@ttpfs/ui-react@1.4.5':
+    resolution: {integrity: sha512-x+lEwmU6Y4H0axRvsYsYAwXlcRQXy2Uq90z4bluRlo+XkVSbI1DenDWhl19rcaUuZBfdKnycdE17NPKGdt5jag==}
     peerDependencies:
       '@iconify-json/logos': ^1.2.10
       '@iconify-json/lucide': ^1.2.86
@@ -6020,10 +6020,10 @@ snapshots:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
-  '@ttpfs/form-react@0.3.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)':
+  '@ttpfs/form-react@0.3.5(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)(zod@4.3.6)':
     dependencies:
       '@hookform/resolvers': 5.2.2(react-hook-form@7.72.0(react@19.2.4))
-      '@ttpfs/ui-react': 1.4.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+      '@ttpfs/ui-react': 1.4.5(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       react-hook-form: 7.72.0(react@19.2.4)
@@ -6039,10 +6039,10 @@ snapshots:
       - '@types/react-dom'
       - tailwind-merge
 
-  '@ttpfs/table-react@0.2.3(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)':
+  '@ttpfs/table-react@0.2.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)':
     dependencies:
       '@tanstack/react-table': 8.21.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@ttpfs/ui-react': 1.4.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
+      '@ttpfs/ui-react': 1.4.5(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       tailwindcss: 4.2.2
@@ -6055,7 +6055,7 @@ snapshots:
       - '@types/react-dom'
       - tailwind-merge
 
-  '@ttpfs/ui-react@1.4.4(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)':
+  '@ttpfs/ui-react@1.4.5(@iconify-json/logos@1.2.11)(@iconify-json/lucide@1.2.101)(@iconify-json/svg-spinners@1.2.4)(@iconify/tailwind4@1.2.3(tailwindcss@4.2.2))(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.4.0)(tailwindcss@4.2.2)':
     dependencies:
       '@heroui/react': 3.0.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.2)
       '@heroui/styles': 3.0.1(tailwind-merge@3.4.0)(tailwindcss@4.2.2)
