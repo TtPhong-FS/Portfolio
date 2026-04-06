@@ -6,6 +6,7 @@
 		"@ttpfs/table-react": "0.2.4",
 		"@ttpfs/ui-react": "1.4.5",
 		"@vercel/analytics": "^1.5.0",
+		"@vercel/speed-insights": "^2.0.0",
 		"motion": "^12.38.0",
 		"react": "^19.2.1",
 		"react-dom": "^19.2.1",
